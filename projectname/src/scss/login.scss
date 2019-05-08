@@ -1,0 +1,188 @@
+@charset "utf-8";
+@import "reset";
+.nav-logo {
+    position: relative;
+    margin: 0px;
+    width: 100%;
+    background: #ffffff;
+    height: 60px;
+    line-height: 60px;
+    display: block;
+    .logo-pic {
+        float: left;
+        margin: 17px 0px 17px 40px;
+        height: 26px;
+    }
+    .spaceLine {
+        float: left;
+        width: 1px;
+        height: 30px;
+        margin: 15px;
+        background: #c9c9c9;
+    }
+    .txcard {
+        float: left;
+        font-size: 18px;
+    }
+}
+
+
+/* 登录框 */
+
+.login-box {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 520px;
+    height: 450px;
+    border-radius: 10px;
+    background: #fff;
+    margin: auto;
+    box-shadow: 3px 3px 10px #e8e8e8;
+}
+
+
+/* 账号密码登录、手机登录 */
+
+.tab-title {
+    width: 520px;
+    height: 60px;
+    margin-bottom: 30px;
+    li {
+        float: left;
+        width: 50%;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        a {
+            font-size: 20px;
+            cursor: pointer;
+            color: #8e98a0;
+        }
+    }
+    li:nth-child(1) {
+        background: #dfe4e8;
+    }
+}
+
+
+/* 账号登录 */
+
+.zh {
+    margin: 0px auto;
+    border: 1px solid #bdbdbd;
+    border-radius: 2px;
+    width: 380px;
+    height: 40px;
+    margin-bottom: 30px;
+    .zh-pic {
+        float: left;
+        height: 30px;
+        margin: 5px;
+    }
+    .zh-ipt {
+        float: left;
+        border: none;
+        padding: 0px;
+        margin: 10px 0px;
+        line-height: 20px;
+        outline: none;
+        width: 325px;
+        font-size: 16px;
+    }
+    .zh-code {
+        width: 190px;
+    }
+    .getcode-btn {
+        float: left;
+        height: 100%;
+        width: 130px;
+        border: none;
+        border-left: 1px solid #bdbdbd;
+        margin: 0px 0px 0px 20px;
+        color: #3e3e3e;
+        cursor: pointer;
+        font-size: 16px;
+    }
+}
+
+.zh-btn {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    background: #1c95f3;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+/* 注册、忘记密码 */
+
+.btn-info {
+    margin: 0px auto;
+    width: 380px;
+    height: 30px;
+    .forget-btn {
+        padding-left: 3px;
+    }
+    .forget-btn,
+    .reg-btn {
+        float: right;
+        border: none;
+        background: none;
+        color: #19a2e9;
+        font-size: 13px;
+        padding: 0px;
+        cursor: pointer;
+    }
+    .reg-btn {
+        border-right: 1px solid #19a2e9;
+        padding-right: 3px;
+    }
+}
+
+
+/* 其它登录方式 */
+
+.other {
+    width: 470px;
+    height: 25px;
+    margin: 20px auto 10px auto;
+    .lfline,
+    .rtline {
+        float: left;
+        height: 1px;
+        width: 180px;
+        background: #e5e9ec;
+        margin: 9px 3px;
+    }
+    .otherlogin {
+        float: left;
+        height: 25px;
+        font-size: 13px;
+        padding: 0px 10px;
+        color: #949491;
+    }
+}
+
+
+/* 4张方式登录图 */
+
+.four-pic {
+    width: 320px;
+    height: 40px;
+    margin: 10px auto;
+    a {
+        img {
+            float: left;
+            width: 40px;
+            height: 40px;
+            margin: 0px 18px;
+            cursor: pointer;
+        }
+    }
+}

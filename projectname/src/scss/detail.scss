@@ -1,0 +1,489 @@
+@charset "utf-8";
+@import "reset";
+@import "header";
+
+/* 当前位置 */
+
+.detail-main {
+    width: 100%;
+}
+
+.cur-wei {
+    width: 1226px;
+    margin: 0 auto;
+    height: 47px;
+    line-height: 47px;
+    color: #000;
+    font-size: 14px;
+    a {
+        color: #000;
+        font-size: 14px;
+    }
+    span {
+        padding-left: 6px;
+        padding-right: 10px;
+    }
+}
+
+
+/* 详情页放大镜界面 */
+
+.big-glass {
+    // height: 3000px;
+    width: 100%;
+    border-top: 1px solid #d7d7d7;
+    background: #f9f9f9;
+    // margin-bottom: 93px;
+    .glass-inner {
+        // height: 2000px;
+        width: 1226px;
+        margin: 0 auto;
+        // border: 1px saddlebrown solid;
+    }
+}
+
+
+/* 放大镜左边部分 */
+
+.glass-lf {
+    float: left;
+    padding-top: 25px;
+    width: 512px;
+    .wrap {
+        position: relative;
+        padding: 0;
+        width: 510px;
+        height: 510px;
+        border: 1px solid #e7e7e7;
+        .spic {
+            width: 510px;
+            height: 510px;
+            .sf {
+                position: absolute;
+                z-index: 9999;
+                left: 20px;
+                top: 20px;
+                // display: none;
+                width: 204px;
+                height: 204px;
+                background: #F8B600;
+                border: 1px solid #987777;
+                opacity: 0.4;
+                filter: alpha(opacity=40);
+                cursor: move;
+            }
+        }
+        .bf {
+            display: none;
+            position: absolute;
+            z-index: 99;
+            left: 512px;
+            top: -1px;
+            width: 510px;
+            height: 510px;
+            background: #fff;
+            border: 1px solid #e7e7e7;
+            overflow: hidden;
+            .bpic {
+                width: 1275px;
+                height: 1275px;
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+}
+
+
+/* 放大镜下面几张小图加按钮 */
+
+.ulist {
+    padding-top: 10px;
+    height: 96px;
+    .left {
+        background: url(http://images.changhong.com/chgw/images/pro-ditem-pre_03.jpg) no-repeat left center;
+    }
+    .right {
+        background: url(http://images.changhong.com/chgw/images/pro-ditem-next_03.jpg) no-repeat right center;
+    }
+    .right,
+    .left {
+        display: block;
+        float: left;
+        margin-top: 10px;
+        width: 19px;
+        height: 86px;
+    }
+}
+
+.list {
+    float: left;
+    margin-top: 10px;
+    width: 470px;
+    overflow: hidden;
+    ul {
+        width: 758px;
+        height: 86px;
+        li {
+            float: left;
+            margin-right: 10px;
+            a {
+                display: block;
+                width: 84px;
+                height: 84px;
+                border: 1px solid #eaeaea;
+            }
+        }
+        li:hover {
+            border: 1px solid #ed3c42;
+        }
+    }
+}
+
+
+/* 放大镜右边部分 */
+
+.glass-rt {
+    width: 650px;
+    height: 590px;
+    // background: #F8B600;
+    // border: 1px solid red;
+}
+
+
+/* 货物名称 */
+
+.goods-name {
+    float: left;
+    padding-top: 54px;
+    padding-bottom: 8px;
+    width: 100%;
+    border-bottom: 1px solid #e1e1e1;
+    h3 {
+        float: left;
+        width: 535px;
+        line-height: 28px;
+        color: #000;
+        font-size: 16px;
+        font-weight: normal;
+        p {
+            line-height: 32px;
+            color: #999;
+            font-size: 12px;
+        }
+    }
+    .join {
+        display: block;
+        float: right;
+        margin-top: 10px;
+        width: 68px;
+        height: 22px;
+        line-height: 22px;
+        text-align: center;
+        border: 1px solid #ddd;
+        color: #333;
+        font-size: 14px;
+        background: #f1f1f1;
+    }
+}
+
+
+/* 货物价格 */
+
+.goods-price {
+    float: left;
+    height: 110px;
+    width: 100%;
+    border-bottom: 1px solid #e1e1e1;
+    strong {
+        height: 65px;
+        line-height: 65px;
+        font-size: 18px;
+        color: #f12020;
+        #price {
+            padding-right: 6px;
+            font-size: 23px;
+        }
+    }
+}
+
+
+/* 配送地址 */
+
+.goods-where {
+    height: 86px;
+    float: left;
+    padding-bottom: 15px;
+    padding-top: 26px;
+    width: 100%;
+    border-bottom: 1px solid #e3e3e3;
+    .div {
+        height: 30px;
+        color: #333;
+        .loca {
+            font-size: 12px;
+            line-height: 32px;
+        }
+    }
+}
+
+.fw-info {
+    color: #333;
+    line-height: 56px;
+    font-size: 14px;
+    float: left;
+    width: 600px;
+    span {
+        padding-left: 10px;
+    }
+}
+
+
+/* 货物地址区域选择 */
+
+.goods-address:hover .sub-add {
+    display: block;
+}
+
+.goods-address {
+    height: 28px;
+    padding: 0px 10px 0px 5px;
+    width: initial;
+    float: left;
+    border: 1px solid #dddddd;
+    position: relative;
+    margin-right: 14px;
+    h4 {
+        width: initial;
+        padding-left: 11px;
+        padding-right: 15px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 13px;
+        // display: block;
+        background: url(http://images.changhong.com/chgw/images/x003.png) no-repeat right center;
+    }
+    .sub-add {
+        display: none;
+        width: 430px;
+        left: -1px;
+        height: auto;
+        position: absolute;
+        top: 100%;
+        border: 1px solid #dddddd;
+        background: #ffffff;
+        .address-select-area {
+            border-bottom: 1px solid #f12;
+            height: 40px;
+            margin: 7px 15px 0px;
+            li {
+                float: left;
+                width: 72px;
+                text-align: center;
+                line-height: 30px;
+                height: 30px;
+                background: none;
+                border: 1px solid #dddddd;
+                border-bottom: none;
+                margin: 9px 5px 0px 0px;
+            }
+            .address-check {
+                background: #ffffff;
+                border: 1px solid red;
+                color: #f12020;
+            }
+        }
+        .area-inner {
+            width: auto;
+            height: auto;
+            padding: 20px 30px 30px 20px;
+            a {
+                color: #333333!important;
+                font-size: 13px;
+                line-height: 20px;
+                display: block;
+                height: 20px;
+                float: left;
+                margin: 10px 20px 10px 20px !important;
+            }
+        }
+    }
+}
+
+
+/* 货物数量 */
+
+.goods-num {
+    float: left;
+    padding-top: 30px;
+    width: 100%;
+    .goods-item-num {
+        height: 40px;
+        color: #333;
+        font-size: 14px;
+        span {
+            display: block;
+            float: left;
+            height: 40px;
+            line-height: 40px;
+        }
+        .goods-text {
+            float: left;
+            height: 38px;
+            border: 1px solid #d4d4d4;
+            input {
+                float: left;
+                width: 77px;
+                height: 38px;
+                text-align: center;
+                line-height: 40px;
+                border-right: 1px solid #d4d4d4;
+                color: #000;
+            }
+            a {
+                display: block;
+                float: left;
+                width: 38px;
+                height: 100%;
+                line-height: 34px;
+                text-align: center;
+                background: #fff;
+                border-right: 1px solid #d4d4d4;
+                font-size: 24px;
+                color: #000;
+            }
+        }
+    }
+}
+
+
+/* 立即购买 */
+
+.buynow {
+    a {
+        display: block;
+        float: left;
+        margin-top: 35px;
+        width: 178px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 14px;
+        background: #f12020;
+        border: 1px solid #f12020;
+        color: #fff;
+    }
+}
+
+
+/* 加入购物车 */
+
+.joincar {
+    a {
+        margin-left: 13px;
+        background: #fff;
+        border: 1px solid #999;
+        color: #666;
+        display: block;
+        float: left;
+        margin-top: 35px;
+        width: 178px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 14px;
+    }
+    a:hover {
+        border: 1px solid #f12020;
+    }
+}
+
+
+/* 在线客服 */
+
+.online-pic {
+    float: left;
+    padding-top: 35px;
+    width: 100%;
+    height: 18px;
+    a {
+        padding-left: 25px;
+        padding-right: 30px;
+        line-height: 18px;
+        color: #333;
+        font-size: 14px;
+    }
+    .kf {
+        background: url(../img/pro-ditem-kf_03.jpg) no-repeat left center;
+    }
+    .collect {
+        background: url(../img/pro-ditem-like_03.jpg) no-repeat left center;
+    }
+    .share {
+        background: url(../img/pro-ditem-share_03.jpg) no-repeat left center;
+        padding-right: 10px;
+    }
+    .plat {
+        padding: 0;
+    }
+}
+
+
+/* tab切换 */
+
+.tab {
+    margin: 0 auto;
+    margin-top: 18px;
+    width: 1226px;
+    height: auto;
+    border: 1px solid #cfcfcf;
+    background: #fff;
+    li {
+        float: left;
+        a {
+            display: block;
+            margin: 0 32px;
+            margin-top: 1px;
+            padding: 0 11px;
+            height: 58px;
+            line-height: 58px;
+            color: #000;
+            font-size: 16px;
+            position: relative;
+        }
+        a:hover {
+            border-bottom: 2px solid #f12020;
+        }
+        span {
+            position: absolute;
+            right: -32px;
+            top: 18px;
+            display: block;
+            width: 1px;
+            height: 24px;
+            background: #cfcfcf;
+        }
+    }
+}
+
+
+/* tab二级栏 */
+
+.tab_content {
+    width: 1226px;
+    height: auto;
+    border: 1px solid #cfcfcf;
+    background: #fff;
+    margin: 60px auto 0px auto;
+    padding-top: 20px;
+    .tab-item {
+        display: none;
+        line-height: 200px;
+        text-align: center;
+        height: 200px;
+    }
+}
+
+@import "footer";

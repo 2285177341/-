@@ -1,0 +1,1111 @@
+@charset "UTF-8";
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+textarea,
+p,
+a,
+span {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button,
+input,
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea {
+  resize: none;
+}
+
+body {
+  font-family: "Microsoft YaHei", "微软雅黑", "Arial", sans-serif;
+  color: #666;
+  background: #f9f9f9;
+  min-width: 1345px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f12020;
+}
+
+.clear {
+  *zoom: 1;
+}
+
+/* 针对IE7 hack，触发IE7的haslayout，以清除浮动 */
+.clear:before,
+.clear:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.clear:after {
+  clear: both;
+}
+
+.lf {
+  float: left;
+}
+
+.rt {
+  float: right;
+}
+
+.com-width {
+  width: 1226px;
+  margin: 0 auto;
+}
+
+.top-bar {
+  font-size: 13px;
+  background: #333;
+  color: #fff;
+  line-height: 35px;
+  text-align: center;
+}
+
+.top-bar-lf {
+  height: 35px;
+}
+.top-bar-lf li {
+  float: left;
+}
+.top-bar-lf li a {
+  display: block;
+  width: 145px;
+  color: #fff;
+}
+.top-bar-lf li:hover {
+  background: #555;
+}
+.top-bar-lf li:nth-child(1) a {
+  background: #555;
+}
+
+/* 头部右边部分 */
+.top-bar-rt {
+  height: 35px;
+}
+.top-bar-rt .mytool {
+  width: 400px;
+}
+.top-bar-rt .mytool li {
+  float: left;
+}
+.top-bar-rt .mytool li a {
+  display: inline-block;
+  width: 95px;
+  color: #fff;
+  padding-left: 25px;
+}
+.top-bar-rt .mytool li:hover {
+  background: #555;
+}
+
+/* 头部登录 */
+.top-bar-rt {
+  margin-right: 60px;
+}
+.top-bar-rt .login span {
+  margin: 0 12px;
+}
+
+/* 我的长虹二级登录 */
+.mytool-inner li {
+  position: relative;
+}
+.mytool-inner li .hcyp-ewm-img {
+  display: none;
+  position: absolute;
+  left: 0px;
+  top: 35px;
+  z-index: 1000;
+}
+.mytool-inner li .mych {
+  display: none;
+  width: 230px;
+  height: 225px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #e1e0e0;
+  position: absolute;
+  left: 0px;
+  top: 35px;
+  z-index: 1600;
+}
+.mytool-inner li .mych .mych-info {
+  padding-top: 18px;
+  padding-left: 25px;
+  overflow: hidden;
+}
+.mytool-inner li .shopping-car {
+  display: none;
+  position: absolute;
+  width: 315px;
+  top: 35px;
+  right: 0px;
+  background: #ffffff;
+  z-index: 500;
+  box-shadow: 0px 0px 2px 0px #e1e0e0;
+}
+.mytool-inner li .shopping-car .car-nogoods {
+  padding: 15px 0px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #666666;
+  text-align: center;
+  font-weight: normal;
+}
+.mytool-inner li:hover .suber-nav {
+  display: block;
+}
+
+.mych-info img {
+  display: block;
+  float: left;
+}
+.mych-info .my-login {
+  float: left;
+  width: 145px;
+  height: 60px;
+}
+.mych-info .my-login .helogin {
+  width: 135px;
+  height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 16px;
+  height: 16px;
+  margin-top: 10px;
+}
+.mych-info .my-login .helogin a {
+  font-size: 16px;
+  color: blue;
+}
+.mych-info .my-login .set {
+  line-height: 13px;
+  height: 13px;
+}
+.mych-info .my-login .set a {
+  color: blue;
+  margin-top: 10px;
+}
+
+/* mych-tool */
+.mych-tool {
+  line-height: 30px;
+  float: left;
+  margin-top: 5px;
+  margin-top: 20px;
+}
+.mych-tool a {
+  font-size: 13px;
+  color: #666 !important;
+  float: left;
+  padding-left: 4px !important;
+}
+.mych-tool span {
+  font-size: 12px;
+  color: #cfcfcf;
+  margin: 0px 10px;
+  float: left;
+}
+
+/* 头部导航 */
+.header-nav {
+  width: 100%;
+  height: 78px;
+  background: #fff;
+  position: relative;
+}
+
+/* 长虹logo图 */
+.chlogo img {
+  display: block;
+  height: 78px;
+}
+
+/* 长虹头部导航 */
+.head-inner-nav ul li {
+  width: 90px;
+  float: left;
+  line-height: 78px;
+  height: 78px;
+  text-align: center;
+}
+.head-inner-nav ul li a {
+  color: #333;
+}
+.head-inner-nav ul li a:hover {
+  color: red;
+}
+.head-inner-nav ul li:nth-child(1) a {
+  color: red;
+}
+.head-inner-nav ul li:hover .inner-subnav {
+  display: block;
+}
+
+/* 搜索框 */
+.search {
+  height: 38px;
+  width: 200px;
+  border: 1px solid #e3e3e3;
+  float: right;
+  overflow: hidden;
+  margin-top: 17px;
+}
+.search form .search-txt {
+  padding-left: 10px;
+  height: 38px;
+  line-height: 38px;
+  font-size: 14px;
+  color: #a9a9a9;
+  float: left;
+  width: 155px;
+}
+.search form .search-btn {
+  display: block;
+  width: 35px;
+  height: 38px;
+  background: url(http://images.changhong.com/chgw/images/home-serach-btn_05.png) no-repeat left center;
+  cursor: pointer;
+}
+
+/* 导航二级导航 */
+.inner-subnav {
+  display: none;
+  height: 229px;
+  background: #ffffff;
+  border-top: 1px solid #eeeeee;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 100% !important;
+  z-index: 100;
+}
+.inner-subnav .hot {
+  line-height: 229px;
+  height: 229px;
+  padding-left: 45px;
+  margin-left: 32px;
+  float: left;
+}
+.inner-subnav .hot a {
+  cursor: default;
+  color: #666666;
+}
+.inner-subnav .pic {
+  margin-left: 167px;
+}
+.inner-subnav .pic li {
+  height: 229px;
+  float: left;
+  margin: 20px 36px;
+  position: relative;
+  width: 170px;
+}
+.inner-subnav .pic li .pic-inner {
+  display: block;
+  width: 135px;
+  height: 135px;
+  margin: 0 auto;
+}
+.inner-subnav .pic li .TVdetail {
+  width: 170px;
+  height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 170px;
+  text-align: center;
+}
+.inner-subnav .pic li .TVdetail a {
+  font-size: 14px;
+  color: #000000;
+  width: 170px;
+  display: block;
+  line-height: 30px;
+}
+.inner-subnav .pic li .price {
+  width: 170px;
+  font-weight: normal;
+  font-family: normal;
+  text-align: center;
+  line-height: 23px;
+  font-size: 14px;
+  color: #f12020;
+}
+
+/* banner导航 */
+.banner-nav-btn {
+  position: absolute;
+  top: -48px;
+  left: 220px;
+}
+.banner-nav-btn a {
+  display: block;
+  width: 34px;
+  height: 18px;
+  border-left: 1px solid #d4d4d4;
+  background: url(http://images.changhong.com/chgw/images/inner-icon-gray.png) no-repeat 10px center;
+}
+
+.banner-nav {
+  width: 226px;
+  height: 78px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -613px;
+  z-index: 50;
+}
+.banner-nav .nav-inner {
+  background: rgba(0, 0, 0, 0.4);
+  height: 480px;
+  padding: 10px 0px;
+  position: relative;
+}
+.banner-nav .nav-inner li {
+  height: 60px;
+  line-height: 60px;
+}
+.banner-nav .nav-inner li a {
+  font-size: 16px;
+  color: #fff;
+  height: 60px;
+  width: 151px;
+}
+.banner-nav .nav-inner li .first-nav {
+  padding-left: 75px;
+  display: block;
+}
+.banner-nav .nav-inner li:hover {
+  background: red;
+}
+.banner-nav .nav-inner li:hover .inner-com {
+  display: block;
+}
+.banner-nav .nav-inner li:nth-child(1) a {
+  background: url(http://images.changhong.com/chgw/images/inner-chiq-icon.png) no-repeat 20px center;
+}
+.banner-nav .nav-inner li:nth-child(2) a {
+  background: url(http://images.changhong.com/chgw/images/inner-TV-icon.png) no-repeat 20px center;
+}
+.banner-nav .nav-inner li:nth-child(3) a {
+  background: url(http://images.changhong.com/chgw/images/inner-air-icon.png) no-repeat 20px center;
+}
+.banner-nav .nav-inner li:nth-child(4) a {
+  background: url(http://images.changhong.com/chgw/images/inner-icebox-icon.png) no-repeat 20px center;
+}
+.banner-nav .nav-inner li:nth-child(5) a {
+  background: url(http://images.changhong.com/chgw/images/inner-ele-icon.png) no-repeat 20px center;
+}
+.banner-nav .nav-inner li:nth-child(6) a {
+  background: url(http://images.changhong.com/chgw/images/inner-digital-icon.png) no-repeat 20px center;
+}
+.banner-nav .nav-inner li:nth-child(7) a {
+  background: url(http://images.changhong.com/chgw/images/inner-other-icon.png) no-repeat 20px center;
+}
+
+/* 启客系列里面内容 */
+.inner-com {
+  display: none;
+  width: 400px;
+  min-height: 476px;
+  position: absolute;
+  background: #fff;
+  left: 100%;
+  top: 0;
+  padding: 24px 40px 0;
+  box-shadow: 0px 1px 2px 0px #e1e1e1;
+}
+.inner-com .inner-list {
+  width: 400px;
+  padding-bottom: 30px;
+}
+.inner-com .inner-list a:hover {
+  color: red;
+}
+.inner-com .inner-list .inner-list-name {
+  display: block;
+  height: 70px;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 16px;
+  color: #333333;
+}
+.inner-com .inner-list .inner-list-name img {
+  margin-right: 10px;
+}
+.inner-com .inner-list .inner-content {
+  line-height: 30px;
+  padding-top: 8px;
+  width: 400px;
+}
+.inner-com .inner-list .inner-content a:hover {
+  color: red;
+}
+.inner-com .inner-list .inner-content a {
+  font-size: 14px;
+  color: #666666;
+  padding: 0px 15px;
+  border-left: 1px solid #e0e0e0;
+}
+
+/* 当前位置 */
+.detail-main {
+  width: 100%;
+}
+
+.cur-wei {
+  width: 1226px;
+  margin: 0 auto;
+  height: 47px;
+  line-height: 47px;
+  color: #000;
+  font-size: 14px;
+}
+.cur-wei a {
+  color: #000;
+  font-size: 14px;
+}
+.cur-wei span {
+  padding-left: 6px;
+  padding-right: 10px;
+}
+
+/* 详情页放大镜界面 */
+.big-glass {
+  width: 100%;
+  border-top: 1px solid #d7d7d7;
+  background: #f9f9f9;
+}
+.big-glass .glass-inner {
+  width: 1226px;
+  margin: 0 auto;
+}
+
+/* 放大镜左边部分 */
+.glass-lf {
+  float: left;
+  padding-top: 25px;
+  width: 512px;
+}
+.glass-lf .wrap {
+  position: relative;
+  padding: 0;
+  width: 510px;
+  height: 510px;
+  border: 1px solid #e7e7e7;
+}
+.glass-lf .wrap .spic {
+  width: 510px;
+  height: 510px;
+}
+.glass-lf .wrap .spic .sf {
+  position: absolute;
+  z-index: 9999;
+  left: 20px;
+  top: 20px;
+  width: 204px;
+  height: 204px;
+  background: #F8B600;
+  border: 1px solid #987777;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  cursor: move;
+}
+.glass-lf .wrap .bf {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  left: 512px;
+  top: -1px;
+  width: 510px;
+  height: 510px;
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  overflow: hidden;
+}
+.glass-lf .wrap .bf .bpic {
+  width: 1275px;
+  height: 1275px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* 放大镜下面几张小图加按钮 */
+.ulist {
+  padding-top: 10px;
+  height: 96px;
+}
+.ulist .left {
+  background: url(http://images.changhong.com/chgw/images/pro-ditem-pre_03.jpg) no-repeat left center;
+}
+.ulist .right {
+  background: url(http://images.changhong.com/chgw/images/pro-ditem-next_03.jpg) no-repeat right center;
+}
+.ulist .right,
+.ulist .left {
+  display: block;
+  float: left;
+  margin-top: 10px;
+  width: 19px;
+  height: 86px;
+}
+
+.list {
+  float: left;
+  margin-top: 10px;
+  width: 470px;
+  overflow: hidden;
+}
+.list ul {
+  width: 758px;
+  height: 86px;
+}
+.list ul li {
+  float: left;
+  margin-right: 10px;
+}
+.list ul li a {
+  display: block;
+  width: 84px;
+  height: 84px;
+  border: 1px solid #eaeaea;
+}
+.list ul li:hover {
+  border: 1px solid #ed3c42;
+}
+
+/* 放大镜右边部分 */
+.glass-rt {
+  width: 650px;
+  height: 590px;
+}
+
+/* 货物名称 */
+.goods-name {
+  float: left;
+  padding-top: 54px;
+  padding-bottom: 8px;
+  width: 100%;
+  border-bottom: 1px solid #e1e1e1;
+}
+.goods-name h3 {
+  float: left;
+  width: 535px;
+  line-height: 28px;
+  color: #000;
+  font-size: 16px;
+  font-weight: normal;
+}
+.goods-name h3 p {
+  line-height: 32px;
+  color: #999;
+  font-size: 12px;
+}
+.goods-name .join {
+  display: block;
+  float: right;
+  margin-top: 10px;
+  width: 68px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  border: 1px solid #ddd;
+  color: #333;
+  font-size: 14px;
+  background: #f1f1f1;
+}
+
+/* 货物价格 */
+.goods-price {
+  float: left;
+  height: 110px;
+  width: 100%;
+  border-bottom: 1px solid #e1e1e1;
+}
+.goods-price strong {
+  height: 65px;
+  line-height: 65px;
+  font-size: 18px;
+  color: #f12020;
+}
+.goods-price strong #price {
+  padding-right: 6px;
+  font-size: 23px;
+}
+
+/* 配送地址 */
+.goods-where {
+  height: 86px;
+  float: left;
+  padding-bottom: 15px;
+  padding-top: 26px;
+  width: 100%;
+  border-bottom: 1px solid #e3e3e3;
+}
+.goods-where .div {
+  height: 30px;
+  color: #333;
+}
+.goods-where .div .loca {
+  font-size: 12px;
+  line-height: 32px;
+}
+
+.fw-info {
+  color: #333;
+  line-height: 56px;
+  font-size: 14px;
+  float: left;
+  width: 600px;
+}
+.fw-info span {
+  padding-left: 10px;
+}
+
+/* 货物地址区域选择 */
+.goods-address:hover .sub-add {
+  display: block;
+}
+
+.goods-address {
+  height: 28px;
+  padding: 0px 10px 0px 5px;
+  width: initial;
+  float: left;
+  border: 1px solid #dddddd;
+  position: relative;
+  margin-right: 14px;
+}
+.goods-address h4 {
+  width: initial;
+  padding-left: 11px;
+  padding-right: 15px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 13px;
+  background: url(http://images.changhong.com/chgw/images/x003.png) no-repeat right center;
+}
+.goods-address .sub-add {
+  display: none;
+  width: 430px;
+  left: -1px;
+  height: auto;
+  position: absolute;
+  top: 100%;
+  border: 1px solid #dddddd;
+  background: #ffffff;
+}
+.goods-address .sub-add .address-select-area {
+  border-bottom: 1px solid #f12;
+  height: 40px;
+  margin: 7px 15px 0px;
+}
+.goods-address .sub-add .address-select-area li {
+  float: left;
+  width: 72px;
+  text-align: center;
+  line-height: 30px;
+  height: 30px;
+  background: none;
+  border: 1px solid #dddddd;
+  border-bottom: none;
+  margin: 9px 5px 0px 0px;
+}
+.goods-address .sub-add .address-select-area .address-check {
+  background: #ffffff;
+  border: 1px solid red;
+  color: #f12020;
+}
+.goods-address .sub-add .area-inner {
+  width: auto;
+  height: auto;
+  padding: 20px 30px 30px 20px;
+}
+.goods-address .sub-add .area-inner a {
+  color: #333333 !important;
+  font-size: 13px;
+  line-height: 20px;
+  display: block;
+  height: 20px;
+  float: left;
+  margin: 10px 20px 10px 20px !important;
+}
+
+/* 货物数量 */
+.goods-num {
+  float: left;
+  padding-top: 30px;
+  width: 100%;
+}
+.goods-num .goods-item-num {
+  height: 40px;
+  color: #333;
+  font-size: 14px;
+}
+.goods-num .goods-item-num span {
+  display: block;
+  float: left;
+  height: 40px;
+  line-height: 40px;
+}
+.goods-num .goods-item-num .goods-text {
+  float: left;
+  height: 38px;
+  border: 1px solid #d4d4d4;
+}
+.goods-num .goods-item-num .goods-text input {
+  float: left;
+  width: 77px;
+  height: 38px;
+  text-align: center;
+  line-height: 40px;
+  border-right: 1px solid #d4d4d4;
+  color: #000;
+}
+.goods-num .goods-item-num .goods-text a {
+  display: block;
+  float: left;
+  width: 38px;
+  height: 100%;
+  line-height: 34px;
+  text-align: center;
+  background: #fff;
+  border-right: 1px solid #d4d4d4;
+  font-size: 24px;
+  color: #000;
+}
+
+/* 立即购买 */
+.buynow a {
+  display: block;
+  float: left;
+  margin-top: 35px;
+  width: 178px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+  background: #f12020;
+  border: 1px solid #f12020;
+  color: #fff;
+}
+
+/* 加入购物车 */
+.joincar a {
+  margin-left: 13px;
+  background: #fff;
+  border: 1px solid #999;
+  color: #666;
+  display: block;
+  float: left;
+  margin-top: 35px;
+  width: 178px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+}
+.joincar a:hover {
+  border: 1px solid #f12020;
+}
+
+/* 在线客服 */
+.online-pic {
+  float: left;
+  padding-top: 35px;
+  width: 100%;
+  height: 18px;
+}
+.online-pic a {
+  padding-left: 25px;
+  padding-right: 30px;
+  line-height: 18px;
+  color: #333;
+  font-size: 14px;
+}
+.online-pic .kf {
+  background: url(../img/pro-ditem-kf_03.jpg) no-repeat left center;
+}
+.online-pic .collect {
+  background: url(../img/pro-ditem-like_03.jpg) no-repeat left center;
+}
+.online-pic .share {
+  background: url(../img/pro-ditem-share_03.jpg) no-repeat left center;
+  padding-right: 10px;
+}
+.online-pic .plat {
+  padding: 0;
+}
+
+/* tab切换 */
+.tab {
+  margin: 0 auto;
+  margin-top: 18px;
+  width: 1226px;
+  height: auto;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+}
+.tab li {
+  float: left;
+}
+.tab li a {
+  display: block;
+  margin: 0 32px;
+  margin-top: 1px;
+  padding: 0 11px;
+  height: 58px;
+  line-height: 58px;
+  color: #000;
+  font-size: 16px;
+  position: relative;
+}
+.tab li a:hover {
+  border-bottom: 2px solid #f12020;
+}
+.tab li span {
+  position: absolute;
+  right: -32px;
+  top: 18px;
+  display: block;
+  width: 1px;
+  height: 24px;
+  background: #cfcfcf;
+}
+
+/* tab二级栏 */
+.tab_content {
+  width: 1226px;
+  height: auto;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+  margin: 60px auto 0px auto;
+  padding-top: 20px;
+}
+.tab_content .tab-item {
+  display: none;
+  line-height: 200px;
+  text-align: center;
+  height: 200px;
+}
+
+.footer {
+  background: #efefef;
+  color: #666;
+  height: 564px;
+  margin-top: 60px;
+}
+
+.foot-top {
+  height: 340px;
+}
+
+.help-about {
+  padding: 37px 25px 0px;
+  height: 77px;
+  border-bottom: 1px solid #dddddd;
+}
+.help-about .about-serve .pic {
+  margin-top: 7px;
+  width: 55px;
+  height: 40px;
+  float: left;
+}
+.help-about .about-serve .info {
+  margin-left: 15px;
+  float: right;
+  width: 112px;
+}
+.help-about .about-serve .info h2 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333333;
+  line-height: 18px;
+}
+.help-about .about-serve .info p {
+  font-size: 14px;
+  line-height: 14px;
+  color: #999;
+  margin-top: 10px;
+}
+
+.about-serve2 {
+  margin-left: 320px !important;
+}
+
+/* 底部内容 1*/
+.contact {
+  margin-top: 20px;
+  padding-left: 25px;
+}
+
+.mylink {
+  width: 385px;
+  padding-top: 4px;
+}
+.mylink ul .help-title {
+  font-size: 16px;
+  color: #333333;
+  font-weight: 500;
+  line-height: 16px;
+  height: 16px;
+  margin-bottom: 18px;
+}
+.mylink ul li {
+  line-height: 30px;
+  height: 30px;
+}
+.mylink ul li a {
+  font-size: 12px;
+  color: #999;
+}
+.mylink .ml40 {
+  margin-left: 40px;
+}
+
+/* 底部内容 2*/
+.contact .help-team {
+  width: 186px;
+  margin-left: 48px;
+}
+
+.foot-shopping {
+  border-top: 1px solid #cccccc;
+  margin-top: 14px;
+  padding-top: 14px;
+}
+.foot-shopping p {
+  line-height: 30px;
+}
+.foot-shopping p a {
+  font-size: 16px;
+  color: #333333;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+/* 底部内容 3*/
+.help-tel {
+  width: 208px;
+  margin-left: 62px;
+  height: 147px;
+  border-left: 1px solid #cccccc;
+  padding-top: 4px;
+}
+.help-tel p {
+  margin-left: 35px;
+  padding-left: 33px;
+  height: 20px;
+  line-height: 20px;
+}
+.help-tel .airlines {
+  background: url(http://images.changhong.com/chgw/images/Customer-service_12.png) no-repeat left center;
+  margin-top: 6px;
+}
+.help-tel .feedback {
+  background: url(http://images.changhong.com/chgw/images/feedback_17.png) no-repeat left center;
+  margin-top: 13px;
+}
+.help-tel h1 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333333;
+  text-align: center;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+
+/* 底部内容 4*/
+.help-code {
+  float: right;
+  padding: 4px 22px 0px;
+  height: 147px;
+  width: 240px;
+  border-left: 1px solid #cccccc;
+}
+.help-code .help-code-box p {
+  font-size: 14px;
+  color: #333333;
+  line-height: 32px;
+  text-align: center;
+}
+
+/* 最底部 */
+.foot-buttom {
+  height: 224px;
+  background: #333333;
+}
+
+.foot-logo {
+  text-align: center;
+  height: 36px;
+  vertical-align: middle;
+  margin-bottom: 19px;
+  margin-top: 20px;
+}
+
+.foot-txt p {
+  text-align: center;
+  font-size: 12px;
+  line-height: 24px;
+  color: #999999;
+}
+
+.foot-note {
+  overflow: hidden;
+  margin-top: 24px;
+}
+.foot-note p {
+  float: left;
+  height: 32px;
+  line-height: 32px;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #999999;
+}
+.foot-note p a {
+  color: #999999;
+}
+.foot-note p a img {
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=detail.css.map */

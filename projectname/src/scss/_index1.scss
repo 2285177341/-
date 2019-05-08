@@ -1,0 +1,312 @@
+@charset "utf-8";
+
+/* 轮播图样式 */
+
+body {
+    background: #f9f9f9;
+}
+
+.banner {
+    margin: 0 auto;
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.pic-list {
+    li {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        a {
+            img {
+                width: 100%;
+                height: 500px;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.dot {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    li {
+        width: 20px;
+        height: 20px;
+        background: white;
+        border-radius: 50%;
+        margin-left: 10px;
+        float: left;
+    }
+}
+
+#btn-left,
+#btn-right {
+    font-size: 80px;
+    color: yellow;
+    position: absolute;
+    top: 50%;
+    margin-top: -60px;
+    // display: none;
+    z-index: 200;
+}
+
+#btn-left {
+    left: 20px;
+}
+
+#btn-right {
+    right: 20px;
+}
+
+.dot .active {
+    background: tomato;
+}
+
+
+/*公告 */
+
+.notice {
+    height: 40px;
+    h2 {
+        font-weight: normal;
+        line-height: 40px;
+        font-size: 14px;
+        color: #333333;
+        height: 40px;
+        padding-left: 55px;
+        background: url(../img/home-radio-icon_03.png) no-repeat left 3px;
+    }
+}
+
+
+/* 公告下面活动 */
+
+.notice-active {
+    height: 160px;
+    margin-bottom: 30px;
+}
+
+
+/* 公告左边四个小活动 */
+
+.four-active {
+    width: 226px;
+    height: 160px;
+    // overflow: hidden;
+    position: relative;
+    background: #585858;
+    .xsolid {
+        position: absolute;
+        display: block;
+        background: #717171;
+    }
+    .xsolid-t {
+        top: 50%;
+        width: 100%;
+        height: 1px;
+    }
+    .xsolid-l {
+        left: 50%;
+        width: 1px;
+        height: 100%;
+    }
+}
+
+.four-active-inner {
+    li {
+        width: 50%;
+        height: 80px;
+        float: left;
+        a {
+            display: block;
+            height: 79px;
+            font-size: 14px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 1;
+            img {
+                padding: 15px 0px 5px;
+                margin: 0px auto;
+                display: block;
+            }
+        }
+    }
+}
+
+
+/* 公告右边三张图 */
+
+.three-pic {
+    width: 985px;
+    margin-left: 15px;
+    li {
+        float: left;
+        a {
+            img {
+                width: 320px;
+                height: 160px;
+                display: block;
+                margin-left: 8px;
+            }
+        }
+    }
+}
+
+
+/* 电视产品 */
+
+
+/* 电视产品左边部分 */
+
+.zbproduct {
+    height: 365px!important;
+}
+
+.tvproduct {
+    height: 685px;
+    padding-top: 30px;
+    margin-bottom: 5px;
+    .tv-left {
+        width: 226px;
+        .tv-title {
+            height: 30px;
+            line-height: 30px;
+            margin-bottom: 15px;
+            p {
+                padding-left: 13px;
+                font-size: 22px;
+                color: #333333;
+                line-height: 25px;
+                height: 25px;
+                float: left;
+                border-left: 4px solid #ca694e;
+            }
+            a {
+                font-size: 14px;
+                float: right;
+                margin-right: 5px;
+                color: #8a4532;
+            }
+        }
+        .tv-pic {
+            height: 630px;
+            overflow: hidden;
+            width: 226px;
+            img {
+                display: block;
+                width: 226px;
+                height: 630px;
+            }
+        }
+        .zb-pic {
+            height: 310px;
+            overflow: hidden;
+            width: 226px;
+            img {
+                width: 226px;
+                height: 310px;
+                display: block;
+            }
+        }
+    }
+}
+
+
+/* 电视产品右边导航 */
+
+.tv-right {
+    width: 1000px;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    .tv-right-nav {
+        width: 1000px;
+        // width: 568px;
+        // padding-left: 432px;
+        margin-right: 8px;
+        margin-bottom: 20px;
+        li {
+            float: left;
+            margin-left: 33px;
+            line-height: 25px;
+            height: 25px;
+            a {
+                font-size: 14px;
+                color: #333333;
+            }
+            a:hover {
+                color: red;
+            }
+        }
+    }
+}
+
+
+/* 电视产品右边8张产品图 */
+
+.tv-right-pic {
+    height: 640px;
+}
+
+.eight-pic {
+    li {
+        background: #fff;
+        width: 190px;
+        height: 260px;
+        margin-bottom: 10px;
+        padding: 25px;
+        float: left;
+        margin-left: 10px;
+        .pic-inner {
+            display: block;
+            height: 160px;
+            width: 160px;
+            margin: 0px auto;
+            img {
+                display: block;
+                height: 160px;
+                width: 160px;
+            }
+        }
+        .TVdetail {
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 14px;
+            text-align: center;
+            height: 15px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            a {
+                font-size: 14px;
+                color: #000;
+            }
+        }
+        .TVxj {
+            line-height: 12px;
+            font-size: 12px;
+            margin-top: 10px;
+            color: #999;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            height: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            text-align: center;
+            color: #f12020;
+            line-height: 22px;
+            margin-top: 10px;
+            font-weight: normal;
+        }
+    }
+    li:hover {
+        box-shadow: 0px 0px 5px 3px #e9e9e9;
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+    <script src="script/jquery.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="reg-head"></div>
+    <!-- 表单验证 -->
+    <div class="com-width">
+        <div class="com-box">
+            <form action="" method="post" name="">
+                <div style="width: 350px;">
+
+                    <div class="row-info">
+                        <p class="hint-info">手机号码</p>
+                        <input name="" maxlength="11" type="text" class="inner-count" placeholder="请输入手机号">
+                        <span for="phone" generated="true" class="error-info">请输入手机号</span>
+                    </div>
+                    <div class="row-info">
+                        <p class="hint-info">设置密码</p>
+                        <input name="password" autocomplete="off" type="password" class="password-info" placeholder="请输入密码">
+                        <p class="password-ask">长度在8~16之间，必须包含字母和数字</p>
+                        <span for="confirm-pwd" generated="true" class="error-info">请输入密码</span>
+                    </div>
+                    <div class="row-info">
+                        <p class="hint-info">确认密码</p>
+                        <input name="checkpwd" autocomplete="off" type="password" class="password-info" placeholder="请输入密码">
+                        <span for="checkpwd" generated="true" class="error-info">请确认密码</span>
+                    </div>
+                    <div class="row-info">
+                        <p class="hint-info">图形验证</p>
+                        <div class="graph" style="display: flex;">
+                            <input id="registCode" name="code" maxlength="4" type="text" placeholder="请输入4位验证码">
+                            <img id="img" class="graph-pic" src="http://cn.changhong.com/sso/register_code.do" alt="">
+                            <span onclick="" class="pic-change">看不清 <br>换一张</span>
+                        </div>
+                        <span for="code" generated="true" class="error-info">验证码只能是4位</span>
+                    </div>
+                    <div class="row-info">
+                        <p class="hint-info">短信验证</p>
+                        <div class="graph">
+                            <input type="text" name="authCode" maxlength="6" placeholder="请输入短信验证码" style="width:172px;height:40px;">
+                            <p class="get-code">获取验证码</p>
+                        </div>
+                        <span class="error-info">短信验证码不能为空</span>
+                    </div>
+                    <p class="reg-num">每个手机号每天只能获取五次验证码</p>
+                    <div class="reg-agreement">
+                        <input type="checkbox" checked="checked">
+                        <p class="agree-inner">我已阅读并接受 <a href="#">版权声明</a>&nbsp;和&nbsp;<a href="#">隐私保护</a> </p>
+                        <span id="check-inner">请阅读并接受 版权声明 和 隐私保护 条款</span>
+                    </div>
+                    <input type="submit" value="注册" class="submit">
+                    <p class="have-inner"><a href="#">已有账号，马上登录</a></p>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- 底部 -->
+    <div class="foot"></div>
+    <script>
+        $('.reg-head').load('reg-head.html');
+        $('.foot').load('footer.html');
+    </script>
+</body>
+
+</html>

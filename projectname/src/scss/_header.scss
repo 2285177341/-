@@ -1,0 +1,451 @@
+@charset "utf-8";
+$box_width:145px;
+$box_height:35px;
+$box_bg:#333;
+$font-size:13px;
+$line_height:35px;
+$borderstyle:1px solid red;
+$fot:float;
+$color:#fff;
+$txt-align:text-align;
+@mixin ellipse($w:135px, $h:30px) {
+    width: $w;
+    height: $h;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.top-bar {
+    font-size: $font-size;
+    background: $box_bg;
+    color: $color;
+    line-height: $line_height;
+    text-align: center;
+}
+
+.top-bar-lf {
+    height: $box_height;
+    li {
+        #{$fot}: left;
+        a {
+            display: block;
+            width: $box_width;
+            color: $color;
+        }
+        &:hover {
+            background: #555;
+        }
+        &:nth-child(1) a {
+            background: #555;
+        }
+    }
+}
+
+
+/* 头部右边部分 */
+
+.top-bar-rt {
+    height: $box_height;
+    .mytool {
+        width: 400px;
+        li {
+            #{$fot}: left;
+            a {
+                display: inline-block;
+                width: 95px;
+                color: $color;
+                padding-left: 25px;
+            }
+            &:hover {
+                background: #555;
+            }
+        }
+    }
+}
+
+
+/* 头部登录 */
+
+.top-bar-rt {
+    margin-right: 60px;
+    .login {
+        span {
+            margin: 0 12px;
+        }
+    }
+}
+
+
+/* 我的长虹二级登录 */
+
+.mytool-inner {
+    li {
+        position: relative;
+        .hcyp-ewm-img {
+            display: none;
+            position: absolute;
+            left: 0px;
+            top: 35px;
+            z-index: 1000;
+        }
+        .mych {
+            display: none;
+            width: 230px;
+            height: 225px;
+            background: #ffffff;
+            box-shadow: 0px 0px 2px 0px #e1e0e0;
+            position: absolute;
+            left: 0px;
+            top: 35px;
+            z-index: 1600;
+            .mych-info {
+                padding-top: 18px;
+                padding-left: 25px;
+                overflow: hidden;
+            }
+        }
+        .shopping-car {
+            display: none;
+            position: absolute;
+            width: 315px;
+            top: 35px;
+            right: 0px;
+            background: #ffffff;
+            z-index: 500;
+            box-shadow: 0px 0px 2px 0px #e1e0e0;
+            .car-nogoods {
+                padding: 15px 0px;
+                line-height: 30px;
+                font-size: 14px;
+                color: #666666;
+                text-align: center;
+                font-weight: normal;
+            }
+        }
+    }
+    li:hover .suber-nav {
+        display: block;
+    }
+}
+
+.mych-info {
+    img {
+        display: block;
+        float: left;
+    }
+    .my-login {
+        float: left;
+        width: 145px;
+        height: 60px;
+        .helogin {
+            @include ellipse();
+            line-height: 16px;
+            height: 16px;
+            margin-top: 10px;
+            a {
+                font-size: 16px;
+                color: blue;
+            }
+        }
+        .set {
+            line-height: 13px;
+            height: 13px;
+            a {
+                color: blue;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+
+/* mych-tool */
+
+.mych-tool {
+    line-height: 30px;
+    float: left;
+    margin-top: 5px;
+    margin-top: 20px;
+    a {
+        font-size: 13px;
+        color: #666!important;
+        float: left;
+        padding-left: 4px!important;
+    }
+    span {
+        font-size: 12px;
+        color: #cfcfcf;
+        margin: 0px 10px;
+        float: left;
+    }
+}
+
+
+/* 头部导航 */
+
+// html {
+// width: 100%;
+// height: 100%;
+// position: relative;
+// }
+.header-nav {
+    width: 100%;
+    height: 78px;
+    background: #fff;
+    position: relative;
+}
+
+
+/* 长虹logo图 */
+
+.chlogo {
+    img {
+        display: block;
+        height: 78px;
+    }
+}
+
+
+/* 长虹头部导航 */
+
+.head-inner-nav {
+    // height: 78px;
+    ul {
+        // height: 78px;
+        // padding-left: 30px;
+        li {
+            width: 90px;
+            float: left;
+            line-height: 78px;
+            height: 78px;
+            text-align: center;
+            a {
+                color: #333;
+            }
+            a:hover {
+                color: red;
+            }
+        }
+        li:nth-child(1) a {
+            color: red;
+        }
+        li:hover .inner-subnav {
+            display: block;
+        }
+    }
+}
+
+
+/* 搜索框 */
+
+.search {
+    height: 38px;
+    width: 200px;
+    border: 1px solid #e3e3e3;
+    float: right;
+    overflow: hidden;
+    margin-top: 17px;
+    form {
+        .search-txt {
+            padding-left: 10px;
+            height: 38px;
+            line-height: 38px;
+            font-size: 14px;
+            color: #a9a9a9;
+            float: left;
+            width: 155px;
+        }
+        .search-btn {
+            display: block;
+            width: 35px;
+            height: 38px;
+            background: url(http://images.changhong.com/chgw/images/home-serach-btn_05.png) no-repeat left center;
+            cursor: pointer;
+        }
+    }
+}
+
+
+/* 导航二级导航 */
+
+.inner-subnav {
+    display: none;
+    height: 229px;
+    background: #ffffff;
+    border-top: 1px solid #eeeeee;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    width: 100%!important;
+    z-index: 100;
+    .hot {
+        line-height: 229px;
+        height: 229px;
+        padding-left: 45px;
+        margin-left: 32px;
+        float: left;
+        a {
+            cursor: default;
+            color: #666666;
+        }
+    }
+    .pic {
+        margin-left: 167px;
+        li {
+            height: 229px;
+            float: left;
+            margin: 20px 36px;
+            position: relative;
+            width: 170px;
+            .pic-inner {
+                display: block;
+                width: 135px;
+                height: 135px;
+                margin: 0 auto;
+            }
+            .TVdetail {
+                @include ellipse($w: 170px, $h: 30px);
+                width: 170px;
+                text-align: center;
+                a {
+                    font-size: 14px;
+                    color: #000000;
+                    width: 170px;
+                    display: block;
+                    line-height: 30px;
+                }
+            }
+            .price {
+                width: 170px;
+                font-weight: normal;
+                font-family: normal;
+                text-align: center;
+                line-height: 23px;
+                font-size: 14px;
+                color: #f12020;
+            }
+        }
+    }
+}
+
+
+/* banner导航 */
+
+.banner-nav-btn {
+    position: absolute;
+    top: -48px;
+    left: 220px;
+    a {
+        display: block;
+        width: 34px;
+        height: 18px;
+        border-left: 1px solid #d4d4d4;
+        background: url(http://images.changhong.com/chgw/images/inner-icon-gray.png) no-repeat 10px center;
+    }
+}
+
+.banner-nav {
+    width: 226px;
+    height: 78px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -613px;
+    z-index: 50;
+    .nav-inner {
+        // display: none;
+        background: rgba(0, 0, 0, .4);
+        height: 480px;
+        padding: 10px 0px;
+        position: relative;
+        li {
+            height: 60px;
+            line-height: 60px;
+            a {
+                font-size: 16px;
+                color: #fff;
+                // @include ellipse($w: 226px, $h: 60px);
+                height: 60px;
+                width: 151px;
+            }
+            .first-nav {
+                padding-left: 75px;
+                display: block;
+            }
+        }
+        li:hover {
+            background: red;
+        }
+        li:hover .inner-com {
+            display: block;
+        }
+        li:nth-child(1) a {
+            background: url(http://images.changhong.com/chgw/images/inner-chiq-icon.png) no-repeat 20px center;
+        }
+        li:nth-child(2) a {
+            background: url(http://images.changhong.com/chgw/images/inner-TV-icon.png) no-repeat 20px center;
+        }
+        li:nth-child(3) a {
+            background: url(http://images.changhong.com/chgw/images/inner-air-icon.png) no-repeat 20px center;
+        }
+        li:nth-child(4) a {
+            background: url(http://images.changhong.com/chgw/images/inner-icebox-icon.png) no-repeat 20px center;
+        }
+        li:nth-child(5) a {
+            background: url(http://images.changhong.com/chgw/images/inner-ele-icon.png) no-repeat 20px center;
+        }
+        li:nth-child(6) a {
+            background: url(http://images.changhong.com/chgw/images/inner-digital-icon.png) no-repeat 20px center;
+        }
+        li:nth-child(7) a {
+            background: url(http://images.changhong.com/chgw/images/inner-other-icon.png) no-repeat 20px center;
+        }
+    }
+}
+
+
+/* 启客系列里面内容 */
+
+.inner-com {
+    display: none;
+    width: 400px;
+    min-height: 476px;
+    position: absolute;
+    background: #fff;
+    left: 100%;
+    top: 0;
+    padding: 24px 40px 0;
+    box-shadow: 0px 1px 2px 0px #e1e1e1;
+    .inner-list {
+        width: 400px;
+        padding-bottom: 30px;
+        a:hover {
+            color: red;
+        }
+        .inner-list-name {
+            display: block;
+            height: 70px;
+            border-bottom: 1px solid #eeeeee;
+            font-size: 16px;
+            color: #333333;
+            img {
+                margin-right: 10px;
+            }
+        }
+        .inner-content {
+            line-height: 30px;
+            padding-top: 8px;
+            width: 400px;
+            a:hover {
+                color: red;
+            }
+            a {
+                font-size: 14px;
+                color: #666666;
+                padding: 0px 15px;
+                border-left: 1px solid #e0e0e0;
+            }
+        }
+    }
+}

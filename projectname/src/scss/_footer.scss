@@ -1,0 +1,202 @@
+@charset "utf-8";
+.footer {
+    background: #efefef;
+    color: #666;
+    height: 564px;
+    margin-top: 60px;
+}
+
+.foot-top {
+    height: 340px;
+}
+
+.help-about {
+    padding: 37px 25px 0px;
+    height: 77px;
+    border-bottom: 1px solid #dddddd;
+    .about-serve {
+        // margin-right: 500px;
+        .pic {
+            margin-top: 7px;
+            width: 55px;
+            height: 40px;
+            float: left;
+        }
+        .info {
+            margin-left: 15px;
+            float: right;
+            width: 112px;
+            h2 {
+                font-weight: bold;
+                font-size: 18px;
+                color: #333333;
+                line-height: 18px;
+            }
+            p {
+                font-size: 14px;
+                line-height: 14px;
+                color: #999;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.about-serve2 {
+    margin-left: 320px!important;
+}
+
+
+/* 底部内容 1*/
+
+.contact {
+    margin-top: 20px;
+    padding-left: 25px;
+}
+
+.mylink {
+    width: 385px;
+    padding-top: 4px;
+    ul {
+        .help-title {
+            font-size: 16px;
+            color: #333333;
+            font-weight: 500;
+            line-height: 16px;
+            height: 16px;
+            margin-bottom: 18px;
+        }
+        li {
+            line-height: 30px;
+            height: 30px;
+            a {
+                font-size: 12px;
+                color: #999;
+            }
+        }
+    }
+    .ml40 {
+        margin-left: 40px;
+    }
+}
+
+
+/* 底部内容 2*/
+
+.contact {
+    .help-team {
+        width: 186px;
+        margin-left: 48px;
+    }
+}
+
+.foot-shopping {
+    border-top: 1px solid #cccccc;
+    margin-top: 14px;
+    padding-top: 14px;
+    p {
+        line-height: 30px;
+        a {
+            font-size: 16px;
+            color: #333333;
+            line-height: 30px;
+            font-weight: 500;
+        }
+    }
+}
+
+
+/* 底部内容 3*/
+
+.help-tel {
+    width: 208px;
+    margin-left: 62px;
+    height: 147px;
+    border-left: 1px solid #cccccc;
+    padding-top: 4px;
+    p {
+        margin-left: 35px;
+        padding-left: 33px;
+        height: 20px;
+        line-height: 20px;
+    }
+    .airlines {
+        background: url(http://images.changhong.com/chgw/images/Customer-service_12.png) no-repeat left center;
+        margin-top: 6px;
+    }
+    .feedback {
+        background: url(http://images.changhong.com/chgw/images/feedback_17.png) no-repeat left center;
+        margin-top: 13px;
+    }
+    h1 {
+        font-size: 20px;
+        font-weight: 500;
+        color: #333333;
+        text-align: center;
+        line-height: 22px;
+        margin-bottom: 15px;
+    }
+}
+
+
+/* 底部内容 4*/
+
+.help-code {
+    float: right;
+    padding: 4px 22px 0px;
+    height: 147px;
+    width: 240px;
+    border-left: 1px solid #cccccc;
+    .help-code-box {
+        p {
+            font-size: 14px;
+            color: #333333;
+            line-height: 32px;
+            text-align: center;
+        }
+    }
+}
+
+
+/* 最底部 */
+
+.foot-buttom {
+    height: 224px;
+    background: #333333;
+}
+
+.foot-logo {
+    text-align: center;
+    height: 36px;
+    vertical-align: middle;
+    margin-bottom: 19px;
+    margin-top: 20px;
+}
+
+.foot-txt {
+    p {
+        text-align: center;
+        font-size: 12px;
+        line-height: 24px;
+        color: #999999;
+    }
+}
+
+.foot-note {
+    overflow: hidden;
+    margin-top: 24px;
+    p {
+        float: left;
+        height: 32px;
+        line-height: 32px;
+        vertical-align: middle;
+        font-size: 12px;
+        color: #999999;
+        a {
+            color: #999999;
+            img {
+                margin-right: 10px;
+            }
+        }
+    }
+}

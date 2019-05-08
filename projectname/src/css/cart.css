@@ -1,0 +1,697 @@
+@charset "UTF-8";
+.top-bar {
+  font-size: 13px;
+  background: #333;
+  color: #fff;
+  line-height: 35px;
+  text-align: center;
+}
+
+.top-bar-lf {
+  height: 35px;
+}
+.top-bar-lf li {
+  float: left;
+}
+.top-bar-lf li a {
+  display: block;
+  width: 145px;
+  color: #fff;
+}
+.top-bar-lf li:hover {
+  background: #555;
+}
+.top-bar-lf li:nth-child(1) a {
+  background: #555;
+}
+
+/* 头部右边部分 */
+.top-bar-rt {
+  height: 35px;
+}
+.top-bar-rt .mytool {
+  width: 400px;
+}
+.top-bar-rt .mytool li {
+  float: left;
+}
+.top-bar-rt .mytool li a {
+  display: inline-block;
+  width: 95px;
+  color: #fff;
+  padding-left: 25px;
+}
+.top-bar-rt .mytool li:hover {
+  background: #555;
+}
+
+/* 头部登录 */
+.top-bar-rt {
+  margin-right: 60px;
+}
+.top-bar-rt .login span {
+  margin: 0 12px;
+}
+
+/* 我的长虹二级登录 */
+.mytool-inner li {
+  position: relative;
+}
+.mytool-inner li .hcyp-ewm-img {
+  display: none;
+  position: absolute;
+  left: 0px;
+  top: 35px;
+  z-index: 1000;
+}
+.mytool-inner li .mych {
+  display: none;
+  width: 230px;
+  height: 225px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #e1e0e0;
+  position: absolute;
+  left: 0px;
+  top: 35px;
+  z-index: 1600;
+}
+.mytool-inner li .mych .mych-info {
+  padding-top: 18px;
+  padding-left: 25px;
+  overflow: hidden;
+}
+.mytool-inner li .shopping-car {
+  display: none;
+  position: absolute;
+  width: 315px;
+  top: 35px;
+  right: 0px;
+  background: #ffffff;
+  z-index: 500;
+  box-shadow: 0px 0px 2px 0px #e1e0e0;
+}
+.mytool-inner li .shopping-car .car-nogoods {
+  padding: 15px 0px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #666666;
+  text-align: center;
+  font-weight: normal;
+}
+.mytool-inner li:hover .suber-nav {
+  display: block;
+}
+
+.mych-info img {
+  display: block;
+  float: left;
+}
+.mych-info .my-login {
+  float: left;
+  width: 145px;
+  height: 60px;
+}
+.mych-info .my-login .helogin {
+  width: 135px;
+  height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 16px;
+  height: 16px;
+  margin-top: 10px;
+}
+.mych-info .my-login .helogin a {
+  font-size: 16px;
+  color: blue;
+}
+.mych-info .my-login .set {
+  line-height: 13px;
+  height: 13px;
+}
+.mych-info .my-login .set a {
+  color: blue;
+  margin-top: 10px;
+}
+
+/* mych-tool */
+.mych-tool {
+  line-height: 30px;
+  float: left;
+  margin-top: 5px;
+  margin-top: 20px;
+}
+.mych-tool a {
+  font-size: 13px;
+  color: #666 !important;
+  float: left;
+  padding-left: 4px !important;
+}
+.mych-tool span {
+  font-size: 12px;
+  color: #cfcfcf;
+  margin: 0px 10px;
+  float: left;
+}
+
+/* 购物车清单 */
+/* logo右边 */
+.logo-top {
+  width: 100%;
+  height: 78px;
+}
+
+.logo-lf {
+  float: left;
+  width: 239px;
+  height: 78px;
+}
+
+.logo-rt {
+  float: right;
+  margin: 24px 0 0 257px;
+  overflow: hidden;
+}
+
+.car-step {
+  float: right;
+}
+.car-step #car-cur-step {
+  color: #4dbd62;
+}
+.car-step #car-cur-step span {
+  background: url(http://cn.changhong.com/ec/cshop/templates/default/images/memberHome/ok-icon03.png) no-repeat;
+  color: #fff;
+}
+.car-step .car-step-num {
+  float: left;
+  font-size: 14px;
+  color: #666666;
+  line-height: 30px;
+}
+.car-step .car-step-num span {
+  display: block;
+  float: left;
+  width: 30px;
+  height: 30px;
+  background: url(http://cn.changhong.com/ec/cshop/templates/default/images/memberHome/ok-icon04.png) no-repeat;
+  margin-right: 8px;
+  font-size: 20px;
+  color: #afafaf;
+  line-height: 28px;
+  text-align: center;
+}
+.car-step p {
+  float: left;
+  width: 130px;
+  border-top: 4px solid #cccccc;
+  margin: 14px 15px 0;
+}
+
+/* 商品选择 */
+.goods {
+  width: 100%;
+  height: 72px;
+}
+
+.all {
+  font-size: 14px;
+  color: #333;
+  line-height: 66px;
+}
+.all .check {
+  cursor: pointer;
+  float: left;
+  width: 14px;
+  height: 14px;
+  margin: 25px 18px 0 15px;
+  background: url(http://cn.changhong.com/ec/cshop/templates/default/images/memberHome/pro-sel-bac01.png) no-repeat;
+}
+.all .check input {
+  float: left;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+.all .all1 {
+  float: left;
+  margin-left: 5px;
+}
+.all .all1 span {
+  color: #f12020;
+  margin: 0 4px;
+}
+
+.lose {
+  float: right;
+  padding-left: 15px;
+  margin-right: 15px;
+  background: url(http://cn.changhong.com/ec/cshop/templates/default/images/memberHome/car-icon01.png) no-repeat left center;
+}
+.lose span {
+  font-size: 14px;
+  color: #333;
+  line-height: 66px;
+}
+
+/* 商品 */
+.gd {
+  width: 100%;
+  height: 165px;
+}
+
+.goods-inner {
+  margin-bottom: 10px;
+  overflow: hidden;
+  height: 165px;
+}
+
+.ckbox {
+  width: 72px;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  margin: 72px 0 0 16px;
+  background: url(http://cn.changhong.com/ec/cshop/templates/default/images/memberHome/pro-sel-bac01.png) no-repeat;
+}
+.ckbox input {
+  float: left;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.goods-right {
+  width: 1176px;
+  height: 165px;
+  background: #fff;
+}
+.goods-right .rt-top {
+  border-bottom: 1px solid #f7f7f7;
+  height: 42px;
+  line-height: 42px;
+  font-size: 14px;
+  color: #666666;
+}
+.goods-right .rt-top .nulll {
+  height: 38px;
+  line-height: 38px;
+  padding-left: 12px;
+  float: left;
+}
+.goods-right .rt-top .null-rt {
+  float: right;
+  margin-top: 8px;
+}
+.goods-right .rt-top .null-rt .like {
+  display: block;
+  float: left;
+  width: 24px;
+  height: 22px;
+  margin: 0 22px 0 6px;
+  background: url(http://cn.changhong.com/ec/cshop/templates/default/images/memberHome/car-icon06.png) no-repeat;
+}
+.goods-right .rt-top .null-rt .no {
+  display: block;
+  float: left;
+  width: 24px;
+  height: 24px;
+  margin: 0 22px 0 6px;
+  background: url(http://cn.changhong.com/ec/cshop/templates/default/images/memberHome/car-icon07.png) no-repeat;
+}
+
+/* 商品右边下面 */
+.picc {
+  width: 110px;
+  height: 110px;
+  margin-left: 10px;
+}
+.picc a {
+  display: block;
+  width: 110px;
+  height: 110px;
+}
+
+.jshao {
+  width: 300px;
+  height: 110px;
+  margin-left: 13px;
+}
+.jshao a {
+  color: #333333;
+  display: table-cell;
+  vertical-align: middle;
+  height: 110px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.price {
+  margin-left: 25px;
+  width: 190px;
+}
+.price .now-price {
+  font-size: 14px;
+  color: #000;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+}
+.price .now-price span {
+  font-size: 16px;
+  color: #eb1a21;
+  margin: 0 22px;
+}
+.price .p1 {
+  font-size: 14px;
+  color: #909090;
+  margin-top: 18px;
+  height: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-decoration: line-through;
+}
+.price .p3 {
+  font-size: 12px;
+  color: #999;
+  height: 14px;
+  line-height: 14px;
+  text-align: center;
+}
+
+.num {
+  width: 225px;
+  height: 35px;
+  margin: 38px 0 0 30px;
+  overflow: hidden;
+}
+.num label {
+  float: left;
+  width: 50px;
+  font-size: 18px;
+  color: #000;
+  line-height: 35px;
+}
+.num .num-rt {
+  float: left;
+  border: 1px solid #cccccc;
+  width: 173px;
+  height: 33px;
+}
+.num .num-rt a {
+  display: block;
+  width: 47px;
+  height: 33px;
+  line-height: 27px;
+  color: #bbbbbb;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+.num .num-rt input {
+  display: block;
+  float: left;
+  padding: 0 1px;
+  width: 75px;
+  height: 33px;
+  line-height: 33px;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  color: #000;
+  font-size: 16px;
+  text-align: center;
+}
+.num .num-rt .jian {
+  float: left;
+  background: url(http://cn.changhong.com/ec/cshop/templates/default/images/memberHome/subtract-icon.jpg) no-repeat center center;
+}
+.num .num-rt .jia {
+  float: right;
+  background: url(http://cn.changhong.com/ec/cshop/templates/default/images/memberHome/add-icon.png) no-repeat center center;
+}
+
+.state {
+  float: right;
+  width: 270px;
+  font-size: 14px;
+  color: black;
+  line-height: 112px;
+  text-align: center;
+}
+
+/* 购物车结算清单 */
+.car-price {
+  width: 100%;
+  height: 100px;
+  background: #313131;
+  box-shadow: 0px 0px 3px 0px #fff;
+  border-top: 2px solid #fff;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+}
+
+.car-lf .yixuan {
+  float: left;
+  margin-left: 5px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 100px;
+}
+.car-lf .yixuan span {
+  font-size: 22px;
+  color: #f12020;
+  margin: 0 16px;
+}
+.car-lf .manjian {
+  float: left;
+  font-size: 14px;
+  color: #fff;
+  line-height: 100px;
+}
+.car-lf .chakan {
+  float: left;
+  font-size: 14px;
+  color: #fff;
+  line-height: 100px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.car-lf i {
+  display: block;
+  float: left;
+  margin: 42px 27px 0 47px;
+  font-style: normal;
+  border-left: 2px solid #acacac;
+  height: 16px;
+}
+
+.car-rt {
+  float: right;
+}
+.car-rt .sum-price {
+  float: left;
+  font-size: 14px;
+  color: #fff;
+  line-height: 100px;
+}
+.car-rt .sum-price span {
+  font-size: 16px;
+  color: #f12020;
+  margin: 0 17px;
+}
+.car-rt input {
+  display: block;
+  float: left;
+  margin: 30px 14px 0 66px;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  background: #f12020;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer {
+  background: #efefef;
+  color: #666;
+  height: 564px;
+  margin-top: 60px;
+}
+
+.foot-top {
+  height: 340px;
+}
+
+.help-about {
+  padding: 37px 25px 0px;
+  height: 77px;
+  border-bottom: 1px solid #dddddd;
+}
+.help-about .about-serve .pic {
+  margin-top: 7px;
+  width: 55px;
+  height: 40px;
+  float: left;
+}
+.help-about .about-serve .info {
+  margin-left: 15px;
+  float: right;
+  width: 112px;
+}
+.help-about .about-serve .info h2 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333333;
+  line-height: 18px;
+}
+.help-about .about-serve .info p {
+  font-size: 14px;
+  line-height: 14px;
+  color: #999;
+  margin-top: 10px;
+}
+
+.about-serve2 {
+  margin-left: 320px !important;
+}
+
+/* 底部内容 1*/
+.contact {
+  margin-top: 20px;
+  padding-left: 25px;
+}
+
+.mylink {
+  width: 385px;
+  padding-top: 4px;
+}
+.mylink ul .help-title {
+  font-size: 16px;
+  color: #333333;
+  font-weight: 500;
+  line-height: 16px;
+  height: 16px;
+  margin-bottom: 18px;
+}
+.mylink ul li {
+  line-height: 30px;
+  height: 30px;
+}
+.mylink ul li a {
+  font-size: 12px;
+  color: #999;
+}
+.mylink .ml40 {
+  margin-left: 40px;
+}
+
+/* 底部内容 2*/
+.contact .help-team {
+  width: 186px;
+  margin-left: 48px;
+}
+
+.foot-shopping {
+  border-top: 1px solid #cccccc;
+  margin-top: 14px;
+  padding-top: 14px;
+}
+.foot-shopping p {
+  line-height: 30px;
+}
+.foot-shopping p a {
+  font-size: 16px;
+  color: #333333;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+/* 底部内容 3*/
+.help-tel {
+  width: 208px;
+  margin-left: 62px;
+  height: 147px;
+  border-left: 1px solid #cccccc;
+  padding-top: 4px;
+}
+.help-tel p {
+  margin-left: 35px;
+  padding-left: 33px;
+  height: 20px;
+  line-height: 20px;
+}
+.help-tel .airlines {
+  background: url(http://images.changhong.com/chgw/images/Customer-service_12.png) no-repeat left center;
+  margin-top: 6px;
+}
+.help-tel .feedback {
+  background: url(http://images.changhong.com/chgw/images/feedback_17.png) no-repeat left center;
+  margin-top: 13px;
+}
+.help-tel h1 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333333;
+  text-align: center;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+
+/* 底部内容 4*/
+.help-code {
+  float: right;
+  padding: 4px 22px 0px;
+  height: 147px;
+  width: 240px;
+  border-left: 1px solid #cccccc;
+}
+.help-code .help-code-box p {
+  font-size: 14px;
+  color: #333333;
+  line-height: 32px;
+  text-align: center;
+}
+
+/* 最底部 */
+.foot-buttom {
+  height: 224px;
+  background: #333333;
+}
+
+.foot-logo {
+  text-align: center;
+  height: 36px;
+  vertical-align: middle;
+  margin-bottom: 19px;
+  margin-top: 20px;
+}
+
+.foot-txt p {
+  text-align: center;
+  font-size: 12px;
+  line-height: 24px;
+  color: #999999;
+}
+
+.foot-note {
+  overflow: hidden;
+  margin-top: 24px;
+}
+.foot-note p {
+  float: left;
+  height: 32px;
+  line-height: 32px;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #999999;
+}
+.foot-note p a {
+  color: #999999;
+}
+.foot-note p a img {
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=cart.css.map */

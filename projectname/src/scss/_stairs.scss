@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/* 左边楼梯效果 */
+
+.stairs {
+    position: fixed;
+    left: 30px;
+    top: 200px;
+    li {
+        width: 45px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        a {
+            display: block;
+            font-size: 14px;
+            color: #666;
+            border-bottom: 1px solid #d6d6d6;
+        }
+    }
+    .active {
+        background: red;
+    }
+    .active a {
+        color: #fff;
+    }
+}
+
+
+/* 右边两个楼梯 */
+
+.two-rt {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 200px;
+    li {
+        width: 40px;
+        height: 40px;
+        border-bottom: 1px solid #fff;
+        a {
+            img {
+                width: 40px;
+                height: 40px;
+                display: block;
+            }
+        }
+    }
+}
+
+
+/* 右边三个楼梯 */
+
+.three-rt {
+    display: none;
+    position: fixed;
+    right: 0;
+    bottom: 200px;
+    li {
+        width: 40px;
+        height: 40px;
+        border-bottom: 1px solid #fff;
+        a {
+            img {
+                width: 40px;
+                height: 40px;
+                display: block;
+            }
+        }
+    }
+}
