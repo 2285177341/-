@@ -535,6 +535,7 @@ a:hover {
   height: 510px;
 }
 .glass-lf .wrap .spic .sf {
+  display: none;
   position: absolute;
   z-index: 9999;
   left: 20px;
@@ -592,17 +593,19 @@ a:hover {
   float: left;
   margin-top: 10px;
   width: 470px;
-  overflow: hidden;
+  height: 84px;
 }
 .list ul {
-  width: 758px;
+  overflow: hidden;
   height: 86px;
 }
 .list ul li {
+  width: 84px;
+  height: 84px;
   float: left;
   margin-right: 10px;
 }
-.list ul li a {
+.list ul li img {
   display: block;
   width: 84px;
   height: 84px;
@@ -626,15 +629,13 @@ a:hover {
   width: 100%;
   border-bottom: 1px solid #e1e1e1;
 }
-.goods-name h3 {
-  float: left;
+.goods-name h3 .title {
+  font-weight: bold;
   width: 535px;
   line-height: 28px;
   color: #000;
-  font-size: 16px;
-  font-weight: normal;
 }
-.goods-name h3 p {
+.goods-name h3 .stitle {
   line-height: 32px;
   color: #999;
   font-size: 12px;
@@ -898,9 +899,6 @@ a:hover {
   font-size: 16px;
   position: relative;
 }
-.tab li a:hover {
-  border-bottom: 2px solid #f12020;
-}
 .tab li span {
   position: absolute;
   right: -32px;
@@ -909,6 +907,9 @@ a:hover {
   width: 1px;
   height: 24px;
   background: #cfcfcf;
+}
+.tab .active {
+  border-bottom: 2px solid #f12020;
 }
 
 /* tab二级栏 */

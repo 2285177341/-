@@ -8,7 +8,8 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/detail.css">
     <script src="script/require.js" defer async="true" data-main="script/main.js"></script>
-    <script src="script/jquery.js"></script>
+    <script src="script/cookie.js" type="text/javascript" charset="utf-8"></script>
+    <script src="script/jquery.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body>
@@ -28,24 +29,24 @@
             <div class="glass-lf lf">
                 <div class="wrap">
                     <div class="spic">
-                        <img src="http://images.changhong.com/chgw/cpzx/pb_televisions/znyy/201902/W020190228553363213098.jpg" alt="" style="display:block;width:510px;height: 510px;">
+                        <img class="smallpic" src="" alt="" style="display:block;width:510px;height: 510px;">
                         <div class="sf"></div>
                     </div>
                     <div class="bf">
-                        <img src="http://images.changhong.com/chgw/cpzx/pb_televisions/znyy/201902/W020190228553362583588.jpg" alt="" class="bpic">
+                        <img src="" alt="" class="bpic">
                     </div>
                     <div class="ulist">
                         <a href="javascript:;" class="left"></a>
                         <div class="list">
                             <ul>
-                                <li><img src="http://images.changhong.com/chgw/cpzx/pb_televisions/znyy/201902/W020190228553362583588.jpg" alt="" style="display:block;width:84px;height:84px;"></li>
+                                <!-- <li><img src="http://images.changhong.com/chgw/cpzx/pb_televisions/znyy/201902/W020190228553362583588.jpg" alt="" style="display:block;width:84px;height:84px;"></li>
                                 <li><img src="http://images.changhong.com/chgw/cpzx/pb_televisions/znyy/201902/W020190228553363213098.jpg" alt="" style="display:block;width:84px;height:84px;"></li>
                                 <li><img src="http://images.changhong.com/chgw/cpzx/pb_televisions/znyy/201902/W020190228553363724966.jpg" alt="" style="display:block;width:84px;height:84px;"></li>
                                 <li><img src="http://images.changhong.com/chgw/cpzx/pb_televisions/znyy/201902/W020190228553364226045.jpg" alt="" style="display:block;width:84px;height:84px;"></li>
                                 <li><img src="http://images.changhong.com/chgw/cpzx/pb_televisions/znyy/201902/W020190228553364770022.jpg" alt="" style="display:block;width:84px;height:84px;"></li>
                                 <li><img src="http://images.changhong.com/chgw/cpzx/pb_televisions/znyy/201902/W020190228553365324219.jpg" alt="" style="display:block;width:84px;height:84px;"></li>
                                 <li><img src="http://images.changhong.com/chgw/cpzx/pb_televisions/znyy/201902/W020190228553365945064.jpg" alt="" style="display:block;width:84px;height:84px;"></li>
-                                <li><img src="http://images.changhong.com/chgw/cpzx/pb_televisions/znyy/201902/W020190228553366466980.jpg" alt="" style="display:block;width:84px;height:84px;"></li>
+                                <li><img src="http://images.changhong.com/chgw/cpzx/pb_televisions/znyy/201902/W020190228553366466980.jpg" alt="" style="display:block;width:84px;height:84px;"></li> -->
 
                             </ul>
                         </div>
@@ -56,14 +57,16 @@
             <div class="glass-rt rt">
                 <div class="goods-name">
                     <h3>
-                        长虹（CHANGHONG）65Q6A 65英寸超薄人工智能4.0OLED有机自发光物联电视
-                        <p>开机物联电视 关机智能音箱</p>
+                        <p class="title" style="font-size:18px;color: #333;"></p>
+                        <!-- 长虹（CHANGHONG）65Q6A 65英寸超薄人工智能4.0OLED有机自发光物联电视 -->
+                        <p class="stitle"></p>
                     </h3>
+
                     <a href="#" class="join">加入对比</a>
                 </div>
                 <div class="goods-price">
                     <strong>
-                        <span id="price">￥21997.00</span>
+                        ￥<span id="price"></span>
                     </strong>
                 </div>
 
@@ -100,7 +103,7 @@
                         <span>商品数量：</span>
                         <div class="goods-text">
                             <a href="javascript:;" class="pre">-</a>
-                            <input type="text" value="1">
+                            <input type="text" value="1" id="count">
                             <a href="javascript:;" class="next">+</a>
                         </div>
 
@@ -142,6 +145,9 @@
             </div>
             <div class="tab-item">
                 客户评价数据
+            </div>
+            <div class="tab-item">
+                服务相关信息
             </div>
             <div class="tab-item">
                 配件相关信息

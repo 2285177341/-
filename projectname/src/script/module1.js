@@ -25,9 +25,10 @@
 //         }
 //     }
 // });
-define([], function() {
-        return {
-            lunbo: (function() {
+define(['config'], function() {
+        require(['jquery'], function() {
+            // 首页轮播图效果
+            (function($) {
                 class lbt {
                     constructor() {
                         this.oBox = document.querySelector(".banner");
@@ -131,8 +132,9 @@ define([], function() {
                 }
                 var lb = new lbt();
                 lb.init();
-            })(),
-            louti: (function() {
+            })(jQuery);
+            // 首页左边楼梯效果
+            (function($) {
                 //1.添加滚轮事件，显示隐藏楼梯导航
                 var $loutinav = $('.stairs');
                 var $loutiLi = $('.stairs li').not('.last');
@@ -181,12 +183,13 @@ define([], function() {
                     });
                 });
 
-            })(),
-            loutirt: (function() {
+            })(jQuery);
+            // 首页右边楼梯效果
+            (function($) {
                 var $twort = $('.two-rt');
                 var $threert = $('.three-rt');
                 var $loutiLi = $('.three-rt li').not('.last');
-                // var $louceng = $('.tvproduct');
+
 
                 $(window).on('scroll', function() {
                     var $top = $(window).scrollTop(); //滚动条的距离
@@ -204,8 +207,10 @@ define([], function() {
                         scrollTop: 0
                     });
                 });
-            })(),
-        }
+            })(jQuery);
+
+        })
+
     })
     //2.define定义模块的案例操作
     // define(['module2'], function () {

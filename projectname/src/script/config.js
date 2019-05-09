@@ -7,10 +7,10 @@ require.config({
         'jqcookie': 'jquery-cookie/1.4.1/jquery.cookie.min',
         'lazyload': 'jquery.lazyload/1.9.1/jquery.lazyload.min',
         'validate': 'jquery-validate/1.19.0/jquery.validate.min',
-        'module2': 'module2' //配置本地文件
+        'lunbo': 'lunbo' //配置本地文件
     },
     shim: { //非AMD规范的JS文件module2,就需要使用Require中的shim.
-        exports: 'module2', //exports 表示输出的对象名
+        exports: 'lunbo', //exports 表示输出的对象名
         //dep:['jquery']//deps 为数组,表示其依赖的库,
     }
 });
