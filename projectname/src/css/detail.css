@@ -623,11 +623,15 @@ a:hover {
 
 /* 货物名称 */
 .goods-name {
-  float: left;
+  float: right;
   padding-top: 54px;
   padding-bottom: 8px;
   width: 100%;
   border-bottom: 1px solid #e1e1e1;
+}
+.goods-name h3 {
+  float: left;
+  width: 535px;
 }
 .goods-name h3 .title {
   font-weight: bold;
@@ -636,7 +640,7 @@ a:hover {
   color: #000;
 }
 .goods-name h3 .stitle {
-  line-height: 32px;
+  line-height: 20px;
   color: #999;
   font-size: 12px;
 }

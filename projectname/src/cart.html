@@ -7,7 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/cart.css">
+
+    <script src="script/require.js" defer async="true" data-main="script/maincar.js"></script>
     <script src="script/jquery.js"></script>
+
 </head>
 
 <body>
@@ -107,58 +110,62 @@
         </div>
     </div>
     <!-- 商品选择 -->
-    <div class="goods">
-        <div class="com-width" style="height:72px;">
-            <div class="lf all">
-                <div class="check"><input type="checkbox"></div>
-                <div class="all1">全选<span>1</span>种商品</div>
-            </div>
-            <div class="rt lose"><span>0</span>种商品已失效</div>
-        </div>
-    </div>
-    <!-- 商品 -->
-    <div class="gd">
-        <div class="com-width goods-inner">
-            <div class="ckbox lf"><input type="checkbox"></div>
-            <div class="goods-right rt">
-                <div class="rt-top">
-                    <div class="nulll"></div>
-                    <div class="null-rt">
-                        <a href="javascript:;" class="like"></a>
-                        <a href="javascript:;" class="no"></a>
-
-                    </div>
+    <div class="goodss">
+        <div class="goods">
+            <div class="com-width" style="height:72px;">
+                <div class="lf all">
+                    <div class="check"><input type="checkbox"></div>
+                    <div class="all1">全选<span>1</span>种商品</div>
                 </div>
-                <div class="rt-bottom">
-                    <div class="lf picc">
-                        <a href="#"><img src="http://cn.changhong.com/cpzx/pb_televisions/znyy/201902/P020190228553357380471.jpg" style="width:110px;height:110px;display:block;"></a>
-                    </div>
-                    <div class="lf jshao"><a href="#">长虹（CHANGHONG）65Q6A 65英寸超薄人工智能4.0OLED有机自发光物联电视</a></div>
-                    <div class="lf price">
-                        <p class="p1"></p>
-                        <p class="now-price">单价<span>21997.00</span>元</p>
-                        <p class="p3"></p>
-                    </div>
-                    <div class="lf num">
-                        <label>数量</label>
-                        <div class="num-rt">
-                            <a href="#" class="jian"></a>
-                            <input type="text" value="1">
-                            <a href="#" class="jia"></a>
+                <div class="rt lose"><span>0</span>种商品已失效</div>
+            </div>
+        </div>
+        <!-- 商品 -->
+        <div class="gd" style="display:none;">
+            <div class="com-width goods-inner">
+                <div class="ckbox lf"><input type="checkbox"></div>
+                <div class="goods-right rt">
+                    <div class="rt-top">
+                        <div class="nulll"></div>
+                        <div class="null-rt">
+                            <a href="javascript:;" class="like"></a>
+                            <a href="javascript:;" class="no"></a>
                         </div>
                     </div>
-                    <div class="state">
-                        <span>有货</span>
+                    <div class="rt-bottom">
+                        <div class="lf picc">
+                            <a href="#"><img src="" style="width:110px;height:110px;display:block;"></a>
+                        </div>
+                        <div class="lf jshao">
+                            <a href="#"></a>
+                        </div>
+                        <div class="lf price">
+                            <p class="p1"></p>
+                            <p class="now-price">单价<span></span>元</p>
+                            <p class="p3"></p>
+                        </div>
+                        <div class="lf num">
+                            <label>数量</label>
+                            <div class="num-rt">
+                                <a href="#" class="jian"></a>
+                                <input type="text" value="1">
+                                <a href="#" class="jia"></a>
+                            </div>
+                        </div>
+                        <div class="state">
+                            <span style="color:red;">有货</span>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
     <!-- 弹出窗 -->
     <div class="car-price">
         <div class="com-width">
             <div class="car-lf">
-                <p class="yixuan">已选<span>0</span>商品</p>
+                <p class="yixuan">已选<span></span>件商品</p>
                 <i></i>
                 <p class="manjian">满减优惠-<span>0</span>元</p>
                 <i></i>
@@ -166,7 +173,7 @@
 
             </div>
             <div class="car-rt">
-                <p class="sum-price">总计<span>0.00</span>元</p>
+                <p class="sum-price">总计<span></span>元</p>
                 <input type="button" value="立即结算">
             </div>
         </div>

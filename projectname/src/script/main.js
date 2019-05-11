@@ -14,4 +14,4 @@
 
 // });
 
-require(['module1', 'module2', 'index', 'details', ]);
+require(['module1', 'index']);

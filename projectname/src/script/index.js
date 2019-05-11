@@ -1,5 +1,5 @@
 define(['config'], function() {
-    require(['jquery'], function() {
+    require(['jquery', 'lazyload'], function() {
 
         (function($) {
             //1.拼接数据

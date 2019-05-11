@@ -260,14 +260,14 @@
 /* 货物名称 */
 
 .goods-name {
-    float: left;
+    float: right;
     padding-top: 54px;
     padding-bottom: 8px;
     width: 100%;
     border-bottom: 1px solid #e1e1e1;
     h3 {
-        // float: left;
-        // width: 535px;
+        float: left;
+        width: 535px;
         .title {
             font-weight: bold;
             width: 535px;
@@ -275,7 +275,7 @@
             color: #000;
         }
         .stitle {
-            line-height: 32px;
+            line-height: 20px;
             color: #999;
             font-size: 12px;
         }

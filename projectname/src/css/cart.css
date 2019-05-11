@@ -255,9 +255,15 @@
 }
 
 /* 商品 */
+.goodss {
+  width: 100%;
+  height: auto;
+}
+
 .gd {
   width: 100%;
   height: 165px;
+  margin-bottom: 10px;
 }
 
 .goods-inner {
@@ -433,8 +439,8 @@
 .state {
   float: right;
   width: 270px;
-  font-size: 14px;
-  color: black;
+  font-size: 16px;
+  color: color;
   line-height: 112px;
   text-align: center;
 }

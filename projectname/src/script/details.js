@@ -1,5 +1,5 @@
 define(['config'], function() {
-    require(['jquery'], function() {
+    require(['jquery', 'jqcookie', 'cookie'], function() {
 
         (function($) {
             var picid = location.search.substring(1).split('=')[1];
@@ -13,7 +13,7 @@ define(['config'], function() {
                 },
                 dataType: 'json'
             }).done(function(data) { //data:后端返回的和id对应的数据
-                console.log(data);
+                // console.log(data);
                 $('.smallpic').attr('src', data.url);
                 $('.bpic').attr('src', data.url);
                 $('.smallpic').attr('sid', data.sid);
@@ -21,7 +21,7 @@ define(['config'], function() {
                 $('.goods-name h3 .stitle').html(data.stitle);
                 $('.goods-price strong #price').html(data.price);
                 var arr = data.urllist.split(',');
-                console.log(arr);
+                // console.log($('.smallpic').attr('sid'));2
                 var str = '';
 
                 $.each(arr, function(index, value) {
@@ -96,6 +96,48 @@ define(['config'], function() {
             }();
 
 
+            //    <div class="goods-num">
+            //         <div class="goods-item-num">
+            //             <span>商品数量：</span>
+            //             <div class="goods-text">
+            //                 <a href="javascript:;" class="pre">-</a>
+            //                 <input type="text" value="1">
+            //                 <a href="javascript:;" class="next">+</a>
+            //             </div>
+
+            //         </div>
+            //     </div>
+            //     <div class="buynow"><a href="javascript:;">立即购买</a></div>
+            //     <div class="joincar"><a href="http://10.31.163.38>jiru<div>
+
+
+            //    数量加加减减
+
+            $pre = $('.goods-text .pre');
+            $count = $('.goods-text #count');
+            $next = $('.goods-text .next');
+            $countnum = $count.val();
+
+            $next.on('click', function() {
+                $countnum++;
+                $count.val($countnum);
+            });
+            $pre.on('click', function() {
+
+                if ($countnum >= 1) {
+                    $countnum--;
+                    $count.val($countnum);
+                } else {
+                    $countnum = 0;
+                }
+
+            })
+
+            // $cookienum = $count.val($countnum);
+
+
+
+
             //购物车的思路
             //存放商品的sid和商品的数量--数组实现。
             //如果商品第一次存购物车，存放的是商品的sid和商品的数量。
@@ -113,26 +155,6 @@ define(['config'], function() {
                     arrnum = getcookie('cookienum').split(','); //cookie商品的num
                 }
             }
-
-            // <div class="p-btn">
-            // 	<input type="text" id="count" value="1" />
-            // 	<a href="##">加入购物车</a>
-            // </div>
-
-            //    <div class="goods-num">
-            //         <div class="goods-item-num">
-            //             <span>商品数量：</span>
-            //             <div class="goods-text">
-            //                 <a href="javascript:;" class="pre">-</a>
-            //                 <input type="text" value="1">
-            //                 <a href="javascript:;" class="next">+</a>
-            //             </div>
-
-            //         </div>
-            //     </div>
-            //     <div class="buynow"><a href="javascript:;">立即购买</a></div>
-            //     <div class="joincar"><a href="http://10.31.163.38>jiru<div>
-
             //2.有了上面的方法，可以点击加入购物车按钮判断商品是否是第一次还是多次。
 
             $('.joincar a').on('click', function() { //点击加入购物车按钮。
@@ -141,21 +163,29 @@ define(['config'], function() {
                 //判断当前的按钮对应的商品的sid和取出的cookie里面的sid进行比较
 
                 //获取当前的按钮对应的商品的sid
-                var $sid = $(this).parents('.glass-lf').find('.smallpic').attr('sid');
-                cookietoarray(); //获取已经存在的cookie值。
+                // $('.smallpic').attr('sid')2
+                var $sid = $(this).parents('.glass-inner').find('.smallpic').attr('sid');
 
+                // console.log($sid);2
+                cookietoarray(); //获取已经存在的cookie值。
+                // console.log(cookietoarray());
                 if ($.inArray($sid, arrsid) != -1) { //商品存在，数量叠加 
                     //先取出cookie中的对应的数量值+当前添加的数量值，添加到对应的cookie中。
-                    var num = parseInt(arrnum[$.inArray($sid, arrsid)]) + parseInt($('#count').val());
+                    // $nownum = $count.val($countnum);
+                    var num = parseInt(arrnum[$.inArray($sid, arrsid)]) + parseInt($countnum);
+                    // console.log(num);
+
+                    console.log(num);
                     arrnum[$.inArray($sid, arrsid)] = num;
                     addcookie('cookienum', arrnum.toString(), 10); //数组存入cookie
-
+                    // console.log(arrnum[$.inArray($sid, arrsid)])
                 } else { //不存在，第一次添加。将商品的id和数量存入数组，再存入cookie.
                     arrsid.push($sid); //将当前的id存入数组
                     addcookie('cookiesid', arrsid.toString(), 10); //数组存入cookie
-                    arrnum.push($('#count').val());
+                    arrnum.push($countnum);
                     addcookie('cookienum', arrnum.toString(), 10); //数组存入cookie
                 }
+                // $countnum = num;
             });
         })(jQuery);
     })
