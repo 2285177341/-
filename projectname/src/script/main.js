@@ -14,4 +14,4 @@
 
 // });
 
-require(['module1', 'index']);
+require(['module1', 'index', 'cookie']);

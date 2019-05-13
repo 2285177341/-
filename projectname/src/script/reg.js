@@ -1,5 +1,7 @@
 define(['config'], function() {
-    require(['jquery', 'jqcookie', 'validate'], function() {
+    require(['jquery', 'validate'], function() {
+
+
 
         $(function() {
             $('#form1').validate({
@@ -34,7 +36,8 @@ define(['config'], function() {
                         remote: '用户名已存在'
                     },
                     password: {
-                        required: '密码不能为空'
+                        required: '密码不能为空',
+                        minlength: '密码不能低于六位',
                     },
                     repass: {
                         required: '密码重复不能为空'
@@ -54,6 +57,10 @@ define(['config'], function() {
                 label.text('√').css('color', 'green').addClass('valid');
             }
         });
+
+
+
+
 
     })
 });

@@ -114,11 +114,10 @@ $txt-align:text-align;
             background: #ffffff;
             z-index: 500;
             box-shadow: 0px 0px 2px 0px #e1e0e0;
+            cursor: pointer;
             .car-nogoods {
                 padding: 15px 0px;
-                line-height: 30px;
-                font-size: 14px;
-                color: #666666;
+                // line-height: 30px;
                 text-align: center;
                 font-weight: normal;
             }

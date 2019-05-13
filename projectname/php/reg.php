@@ -25,13 +25,11 @@
 	//2.如果单击注册按钮,按钮的值为注册,将表单的值添加的数据库.
 	if(isset($_POST['submit']) && $_POST['submit']=="注册"){
 		$user=$_POST['username'];//username：表单的名称
-		$pass=md5($_POST['password']);
-		$pic=$_POST['pic'];
-		$info=$_POST['info'];
-	
+		$pass=$_POST['password'];
+		$email=$_POST['email'];
 		//添加语句
-		$query="insert user(uid,username,password,pic,info) values(null,'$user','$pass','$pic','$info')";
+		$query="insert user(uid,username,password,email) values(null,'$user','$pass','$email')";
 		mysql_query($query);
-		header('location:http://10.31.163.38/chitem/-/projectname/src/login.html');//页面的跳转
+		header('location:http://10.31.163.38/chitem1/changhong/projectname/src/login.html');//页面的跳转
 	}
 ?>

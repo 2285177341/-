@@ -24,6 +24,17 @@ define(['config'], function() {
                 $html += '</ul>';
                 $('.tv-right-pic').html($html);
             });
+
+
+            if (getcookie('UserName')) {
+                $(".logins").hide();
+                $(".use").show().html('欢迎您,' + getcookie('UserName'));
+            } else {
+                $('.logins').show().html('请登录');
+                $(".use").hide();
+            }
+
+
         })(jQuery);
     })
 

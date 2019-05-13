@@ -46,6 +46,11 @@
 
 /* 账号密码登录、手机登录 */
 
+// #error {
+//     width: 100px;
+//     height: 30px;
+//     border: 1px solid red;
+// }
 .tab-title {
     width: 520px;
     height: 60px;
@@ -62,8 +67,11 @@
             color: #8e98a0;
         }
     }
-    li:nth-child(1) {
-        background: #dfe4e8;
+    .active {
+        background: #c9c9c9;
+        a {
+            color: white!important;
+        }
     }
 }
 

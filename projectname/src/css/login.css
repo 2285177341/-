@@ -147,8 +147,11 @@ a:hover {
   cursor: pointer;
   color: #8e98a0;
 }
-.tab-title li:nth-child(1) {
-  background: #dfe4e8;
+.tab-title .active {
+  background: #c9c9c9;
+}
+.tab-title .active a {
+  color: white !important;
 }
 
 /* 账号登录 */

@@ -138,6 +138,21 @@ a:hover {
 .top-bar-rt {
   margin-right: 60px;
 }
+.top-bar-rt .login {
+  position: relative;
+}
+.top-bar-rt .login .use {
+  line-height: 20px;
+  position: absolute;
+  width: 200px;
+  height: 20px;
+  font-size: 16px;
+  color: red;
+  left: -170px;
+  top: 8px;
+  display: inline-block;
+  display: none;
+}
 .top-bar-rt .login span {
   margin: 0 12px;
 }
@@ -531,7 +546,6 @@ body {
 
 /* 输入错误时提示信息 */
 .error-info {
-  display: none !important;
   height: 38px;
   line-height: 38px;
   padding-left: 28px;

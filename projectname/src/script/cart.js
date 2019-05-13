@@ -6,42 +6,7 @@
 //     }).done(function(data) {
 //         $.each(data, function(index, value) {
 
-//             // 	<div class="gd">
-//             // 	<div class="com-width goods-inner">
-//             // 		<div class="ckbox lf"><input type="checkbox"></div>
-//             // 		<div class="goods-right rt">
-//             // 			<div class="rt-top">
-//             // 				<div class="nulll"></div>
-//             // 				<div class="null-rt">
-//             // 					<a href="javascript:;" class="like"></a>
-//             // 					<a href="javascript:;" class="no"></a>
-//             // 				</div>
-//             // 			</div>
-//             // 			<div class="rt-bottom">
-//             // 				<div class="lf picc">
-//             // 					<a href="#"><img src="http://cn.changhong.com/cpzx/pb_televisions/znyy/201902/P020190228553357380471.jpg" style="width:110px;height:110px;display:block;"></a>
-//             // 				</div>
-//             // 				<div class="lf jshao"><a href="#">长虹（CHANGHONG）65Q6A 65英寸超薄人工智能4.0OLED有机自发光物联电视</a></div>
-//             // 				<div class="lf price">
-//             // 					<p class="p1"></p>
-//             // 					<p class="now-price">单价<span>21997.00</span>元</p>
-//             // 					<p class="p3"></p>
-//             // 				</div>
-//             // 				<div class="lf num">
-//             // 					<label>数量</label>
-//             // 					<div class="num-rt">
-//             // 						<a href="#" class="jian"></a>
-//             // 						<input type="text" value="1">
-//             // 						<a href="#" class="jia"></a>
-//             // 					</div>
-//             // 				</div>
-//             // 				<div class="state">
-//             // 					<span>有货</span>
-//             // 				</div>
-//             // 			</div>
-//             // 		</div>
-//             // 	</div>
-//             // </div>
+
 
 //             if (id == value.sid) { //遍历判断sid和传入的sid是否相同，方便将那条数据设置到渲染的商品列表中。
 //                 var $clonebox = $('.gd:hidden').clone(true, true);
@@ -231,88 +196,54 @@
 define(['config'], function() {
     require(['jquery', 'jqcookie'], function() {
 
+
         (function($) {
             //  1.渲染商品列表, 传入两个参数，一个id和数量，根据id和数量渲染整个可见的列表.
+
+
             function goodslist(id, count) {
                 $.ajax({
                     url: 'http://10.31.163.38/chitem1/changhong/projectname/php/changhongdata.php', //获取所有的接口数据
                     dataType: 'json'
                 }).done(function(data) {
-                    console.log(data);
+                    // console.log(data);
                     $.each(data, function(index, value) {
 
-                        // 	<div class="gd">
-                        // 	<div class="com-width goods-inner">
-                        // 		<div class="ckbox lf"><input type="checkbox"></div>
-                        // 		<div class="goods-right rt">
-                        // 			<div class="rt-top">
-                        // 				<div class="nulll"></div>
-                        // 				<div class="null-rt">
-                        // 					<a href="javascript:;" class="like"></a>
-                        // 					<a href="javascript:;" class="no"></a>
-                        // 				</div>
-                        // 			</div>
-                        // 			<div class="rt-bottom">
-                        // 				<div class="lf picc">
-                        // 					<a href="#"><img src="http://cn.changhong.com/cpzx/pb_televisions/znyy/201902/P020190228553357380471.jpg" style="width:110px;height:110px;display:block;"></a>
-                        // 				</div>
-                        // 				<div class="lf jshao"><a href="#">长虹（CHANGHONG）65Q6A 65英寸超薄人工智能4.0OLED有机自发光物联电视</a></div>
-                        // 				<div class="lf price">
-                        // 					<p class="p1"></p>
-                        // 					<p class="now-price">单价<span>21997.00</span>元</p>
-                        // 					<p class="p3"></p>
-                        // 				</div>
-                        // 				<div class="lf num">
-                        // 					<label>数量</label>
-                        // 					<div class="num-rt">
-                        // 						<a href="#" class="jian"></a>
-                        // 						<input type="text" value="1">
-                        // 						<a href="#" class="jia"></a>
-                        // 					</div>
-                        // 				</div>
-                        // 				<div class="state">
-                        // 					<span>有货</span>
-                        // 				</div>
-                        // 			</div>
-                        // 		</div>
-                        // 	</div>
-                        // </div>
+
 
                         if (id == value.sid) { //遍历判断sid和传入的sid是否相同，方便将那条数据设置到渲染的商品列表中。
                             var $clonebox = $('.gd:hidden').clone(true, true);
-
-                            // console.log($('.gd:hidden'));
-                            // console.log(value.url);
-                            // console.log(value.title);
-                            // console.log(value.price);
-                            // $('.picc a').find('img').attr('src', data.url);
                             $clonebox.find('.picc a').find('img').attr('src', value.url);
-                            // console.log($clonebox.find('.picc a'));
                             $clonebox.find('.picc a').find('img').attr('sid', value.sid);
                             $clonebox.find('.jshao').find('a').html(value.title);
                             $clonebox.find('.price .now-price').find('span').html(value.price);
                             $clonebox.find('.num-rt').find('input').val(count);
-
-                            // $clonebox.find('.car-rt .sum-price').find('span').html((value.price * count).toFixed(2));
                             $clonebox.css('display', 'block');
                             $('.goodss').append($clonebox);
-                            //计算每个商品的价格。
-                            console.log(count);
-                            $('.state span').html((value.price * count).toFixed(2));
+
+
                             // 选择商品的数量
                             $('.car-lf .yixuan span').html(count);
-
+                            //计算每个商品的价格。
+                            $('.state span').html((value.price * count).toFixed(2));
                             priceall(); //计算总价的
 
                         }
                     });
                 })
             }
+            //    结算样式，恭喜老板下单成功
+            $('.car-rt .sbt').on('click', function() {
+                $('.shopping-car').show();
+            });
+
+            $('.shopping-car').on('mouseleave', function() {
+                $('.shopping-car').hide();
+            })
+
             //2.获取cookie，执行渲染列表的函数
             if (getcookie('cookiesid') && getcookie('cookienum')) {
                 var s = getcookie('cookiesid').split(','); //数组sid
-                console.log(s);
-                console.log(n);
                 var n = getcookie('cookienum').split(','); //数组num
                 $.each(s, function(i, value) {
                     goodslist(s[i], n[i]);
@@ -325,12 +256,29 @@ define(['config'], function() {
                 $('.gd:visible').each(function(index, element) {
                     if ($(element).find('.goods-inner .ckbox input').prop('checked', true)) {
                         $sum += parseInt($(element).find('.num-rt').find('input').val());
-                        $count += parseFloat($(element).find('.state').find('span').html());
-                        $('.car-lf .yixuan').find('span').html($sum);
-                        $('.car-rt .sum-price span').html($count.toFixed(2));
+                        $count += parseFloat($(element).find('.state span').html());
+
                     }
                 });
+                $('.car-lf .yixuan').find('span').html($sum);
+                $('.car-rt .sum-price span').html('￥' + $count.toFixed(2));
             }
+            //5.全选操作
+            $('.allsel').on('change', function() {
+                $('.goods-item:visible').find(':checkbox').prop('checked', $(this).prop('checked'));
+                $('.allsel').prop('checked', $(this).prop('checked'));
+                priceall(); //取消选项，重算总和。
+            });
+
+            var $inputs = $('.goods-item:visible').find(':checkbox');
+            $('.item-list').on('change', $inputs, function() { //事件的委托的this指向被委托的元素
+                if ($('.goods-item:visible').find('input:checkbox').length == $('.goods-item:visible').find('input:checked').size()) {
+                    $('.allsel').prop('checked', true);
+                } else {
+                    $('.allsel').prop('checked', false);
+                }
+                priceall(); //取消选项，重算总和。
+            });
 
         })(jQuery);
 

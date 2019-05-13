@@ -1,1 +1,1 @@
-require(['login', 'cookie']);
+require(['login', 'cookie', 'module2']);
