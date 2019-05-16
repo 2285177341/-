@@ -1,5 +1,5 @@
 define(['config'], function() {
-    require(['jquery', 'lazyload'], function() {
+    require(['jquery'], function() {
 
         (function($) {
             //1.拼接数据
@@ -34,6 +34,9 @@ define(['config'], function() {
                 $(".use").hide();
             }
 
+            // $("img.lazy").lazyload({
+            //     effect: "fadeIn"
+            // });
 
         })(jQuery);
     })

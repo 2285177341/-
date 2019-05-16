@@ -18,13 +18,13 @@ define(['config'], function() {
                     pass: $password,
                 },
                 success: function(data) { //请求成功，接收后端返回的值
-                    if (data) { //用户名或者密码错误
+                    if (data) { //成功,存cookie,跳转到首页
                         addCookie('UserName', $username, 7);
                         addCookie('password', $password, 7);
                         location.href = 'http://10.31.163.38/chitem1/changhong/projectname/src/index1.html';
 
 
-                    } else { //成功,存cookie,跳转到首页
+                    } else { //用户名或者密码错误
                         $('#error').html('用户名或者密码错误');
                         $('#password').val('');
                         $('#username').val('');

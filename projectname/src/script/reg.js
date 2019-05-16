@@ -1,8 +1,5 @@
 define(['config'], function() {
     require(['jquery', 'validate'], function() {
-
-
-
         $(function() {
             $('#form1').validate({
                 rules: {

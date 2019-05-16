@@ -96,20 +96,6 @@ define(['config'], function() {
             }();
 
 
-            //    <div class="goods-num">
-            //         <div class="goods-item-num">
-            //             <span>商品数量：</span>
-            //             <div class="goods-text">
-            //                 <a href="javascript:;" class="pre">-</a>
-            //                 <input type="text" value="1">
-            //                 <a href="javascript:;" class="next">+</a>
-            //             </div>
-
-            //         </div>
-            //     </div>
-            //     <div class="buynow"><a href="javascript:;">立即购买</a></div>
-            //     <div class="joincar"><a href="http://10.31.163.38>jiru<div>
-
 
             //    数量加加减减
 
